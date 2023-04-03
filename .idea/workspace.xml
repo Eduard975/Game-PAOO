@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PAOO_Grigore.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/PaooGameEtapa1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/PaooGameEtapa2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/GameWindow/GameWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Graphics/Assets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Graphics/ImageLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Graphics/SpriteSheet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Input/KeyManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Items/Character.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Items/Hero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Items/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Maps/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/RefLinks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/States/AboutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/States/MenuState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/States/PlayState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/States/SettingsState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/States/State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Tiles/GrassTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Tiles/MountainTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Tiles/SoilTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Tiles/Tile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Tiles/TreeTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/PaooGame/Tiles/WaterTile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/out/production/PaooGameEtapa1/textures/PaooGameSpriteSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/C.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/FloorTile_S.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/Grigore_scaled_20x_pngcrushed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/Java.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/JavaScript.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/PaooGameSpriteSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/Python.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/Thomas_scaled_20x_pngcrushed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/TypeScript.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/WEng_scaled_20x_pngcrushed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/cpp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/rust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/res/textures/rust_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/GameWindow/GameWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Graphics/Assets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Graphics/ImageLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Graphics/SpriteSheet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Input/KeyManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Items/Character.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Items/Hero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Items/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Maps/Map.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/RefLinks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/States/AboutState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/States/MenuState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/States/PlayState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/States/SettingsState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/States/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Tiles/GrassTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Tiles/MountainTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Tiles/SoilTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Tiles/Tile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Tiles/TreeTile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grigore/src/PaooGame/Tiles/WaterTile.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2NvGv6qv35oTf1mzWEoGi97ltKP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/AC/PAOO_Grigore",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="" />
+      <created>1680537370944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680537370944</updated>
+      <workItem from="1680537371662" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

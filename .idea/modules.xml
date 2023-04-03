@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PAOO_Grigore.iml" filepath="$PROJECT_DIR$/.idea/PAOO_Grigore.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PaooGameEtapa2/PaooGameEtapa2.iml" filepath="$PROJECT_DIR$/PaooGameEtapa2/PaooGameEtapa2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ScheletProiectPAOO/ScheletProiectPAOO.iml" filepath="$PROJECT_DIR$/ScheletProiectPAOO/ScheletProiectPAOO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PAOO_Grigore.iml" filepath="$PROJECT_DIR$/PAOO_Grigore.iml" />
     </modules>
   </component>
 </project>

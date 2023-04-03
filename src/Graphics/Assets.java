@@ -34,22 +34,28 @@ public class Assets
     public static void Init()
     {
             /// Se creaza temporar un obiect SpriteSheet initializat prin intermediul clasei ImageLoader
-        SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/textures/PaooGameSpriteSheet.png"));
+        SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/textures/enemy_sheet.png"));
+        SpriteSheet sheet4 = new SpriteSheet(ImageLoader.LoadImage("/textures/floor_sheet.png"));
+        SpriteSheet sheet3 = new SpriteSheet(ImageLoader.LoadImage("/textures/char_sheet.png"));
+        SpriteSheet sheet2 = new SpriteSheet(ImageLoader.LoadImage("/textures/PaooGameSpriteSheet.png"));
 
             /// Se obtin subimaginile corespunzatoare elementelor necesare.
-        grass = sheet.crop(0, 0);
-        soil = sheet.crop(1, 0);
-        water = sheet.crop(2, 0);
-        mountain = sheet.crop(3, 0);
-        townGrass = sheet.crop(0, 1);
-        townGrassDestroyed = sheet.crop(1, 1);
-        townSoil = sheet.crop(2, 1);
-        tree = sheet.crop(3, 1);
-        heroLeft = sheet.crop(0, 2);
-        heroRight = sheet.crop(1, 2);
-        rockUp = sheet.crop(2, 2);
-        rockDown = sheet.crop(3, 2);
-        rockLeft = sheet.crop(0, 3);
-        rockRight = sheet.crop(1, 3);
+        grass = sheet4.crop(0, 0, 32, 32);
+        soil = sheet.crop(1, 0,64, 64);
+        water = sheet.crop(2, 0,64, 64);
+        mountain = sheet.crop(1, 1,64, 64);
+
+        townGrass = sheet2.crop(0, 1, 48, 48);
+        townGrassDestroyed = sheet2.crop(1, 1, 48, 48);
+        townSoil = sheet2.crop(2, 1, 48, 48);
+        tree = sheet2.crop(3, 1, 48, 48);
+
+        rockUp = sheet2.crop(2, 2, 48, 48);
+        rockDown = sheet2.crop(3, 2, 48, 48);
+        rockLeft = sheet2.crop(0, 3, 48, 48);
+        rockRight = sheet2.crop(1, 3, 48, 48);
+
+        heroLeft = sheet3.crop(0, 0, 64, 98);
+        heroRight = sheet3.crop(1, 0, 64, 98);
     }
 }
