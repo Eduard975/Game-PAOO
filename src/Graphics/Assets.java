@@ -1,4 +1,4 @@
-package PaooGame.Graphics;
+package Graphics;
 
 import java.awt.image.BufferedImage;
 

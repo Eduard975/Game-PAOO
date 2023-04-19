@@ -1,4 +1,4 @@
-package PaooGame.Input;
+package Input;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -12,28 +12,26 @@ import java.awt.event.KeyListener;
  */
 public class KeyManager implements KeyListener
 {
-    private boolean[] keys; /*!< Vector de flaguri pentru toate tastele. Tastele vor fi regasite dupa cod [0 - 255]*/
-    public boolean up;      /*!< Flag pentru tasta "sus" apasata.*/
-    public boolean down;    /*!< Flag pentru tasta "jos" apasata.*/
-    public boolean left;    /*!< Flag pentru tasta "stanga" apasata.*/
-    public boolean right;   /*!< Flag pentru tasta "dreapta" apasata.*/
+    public boolean W;      /*!< Flag pentru tasta "sus" apasata.*/
+    public boolean S;    /*!< Flag pentru tasta "jos" apasata.*/
+    public boolean A;    /*!< Flag pentru tasta "stanga" apasata.*/
+    public boolean D;   /*!< Flag pentru tasta "dreapta" apasata.*/
 
     /*! \fn public KeyManager()
         \brief Constructorul clasei.
      */
     public KeyManager()
     {
-            ///Constructie vector de flaguri aferente tastelor.
-        keys = new boolean[256];
+       W = false;
+       S = false;
+       A = false;
+       D = false;
+        // W A S D Esc Enter
     }
 
 
-    public void Update()
+    public void Update(KeyEvent e)
     {
-        up    = keys[KeyEvent.VK_W];
-        down  = keys[KeyEvent.VK_S];
-        left  = keys[KeyEvent.VK_A];
-        right = keys[KeyEvent.VK_D];
     }
 
     /*! \fn public void keyPressed(KeyEvent e)
@@ -44,8 +42,14 @@ public class KeyManager implements KeyListener
     @Override
     public void keyPressed(KeyEvent e)
     {
-            ///se retine in vectorul de flaguri ca o tasta a fost apasata.
-        keys[e.getKeyCode()] = true;
+        ///se retine in vectorul de flaguri ca o tasta a fost apasata.
+        int code = e.getKeyCode();
+        switch (code) {
+            case KeyEvent.VK_W -> W = true;
+            case KeyEvent.VK_S -> S = true;
+            case KeyEvent.VK_A -> A = true;
+            case KeyEvent.VK_D -> D = true;
+        }
     }
 
     /*! \fn public void keyReleased(KeyEvent e)
@@ -57,7 +61,13 @@ public class KeyManager implements KeyListener
     public void keyReleased(KeyEvent e)
     {
             ///se retine in vectorul de flaguri ca o tasta a fost eliberata.
-        keys[e.getKeyCode()] = false;
+        int code = e.getKeyCode();
+        switch (code) {
+            case KeyEvent.VK_W -> W = false;
+            case KeyEvent.VK_S -> S = false;
+            case KeyEvent.VK_A -> A = false;
+            case KeyEvent.VK_D -> D = false;
+        }
     }
 
     /*! \fn public void keyTyped(KeyEvent e)
