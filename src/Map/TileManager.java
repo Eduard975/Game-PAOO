@@ -43,7 +43,7 @@ public class TileManager {
             if(     world_x + gp.getDefaultTileSize() > gp.player.world_x - gp.player.x  &&
                     world_x - gp.getDefaultTileSize() - 32 < gp.player.world_x + gp.player.x  &&
                     world_y + gp.getDefaultTileSize() > gp.player.world_y - gp.player.y  &&
-                    world_y - gp.getDefaultTileSize() - 49< gp.player.world_y + gp.player.y
+                    world_y - gp.getDefaultTileSize() - 49 < gp.player.world_y + gp.player.y
             ) {
                 g2D.drawImage(tiles[0].image, screen_x, screen_y, 48, 48, null);
             }

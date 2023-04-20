@@ -26,7 +26,7 @@ public class Game extends JPanel implements Runnable
     int maxWorldCol = 2500;
     int maxWorldRow = 1500;
     final int screenWidth = default_TileSize * maxScreenCol; //1200
-    final int screenHeight = default_TileSize * maxScreenRow; //960
+    final int screenHeight = default_TileSize * maxScreenRow; //920
 
     int FPS = 60;
 
