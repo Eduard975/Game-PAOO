@@ -23,10 +23,9 @@ public class Player extends Entity{
         setDefaultValues();
     }
 
-
     public void setDefaultValues(){
-        x = 100;
-        y = 100;
+        x = gp.getScreenWidth() / 2 - 32;
+        y = gp.getScreenHeight() / 2 - 90;
         speed = 4;
         direction = "right";
         texture_option = 0;
@@ -35,22 +34,22 @@ public class Player extends Entity{
     public void update(){
         if (keyM.W) {
             direction = "up";
-            y -= speed;
+            //y -= speed;
         }
 
         if (keyM.S) {
             direction = "down";
-            y += speed;
+            //y += speed;
         }
 
         if (keyM.A) {
             direction = "left";
-            x -= speed;
+           // x -= speed;
         }
 
         if (keyM.D) {
             direction = "right";
-            x += speed;
+            //x += speed;
         }
     }
 

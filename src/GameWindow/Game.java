@@ -2,6 +2,7 @@ package GameWindow;
 
 import Entity.Player;
 import Input.KeyManager;
+import Map.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,20 +16,22 @@ import java.awt.*;
  */
 public class Game extends JPanel implements Runnable
 {
-    final int default_TileSize = 64;
+    final int default_TileSize = 48;
     public int tileSize = default_TileSize;
 
-    final int maxScreenCol = 16;
-    final int getMaxScreenRow = 12;
+    final int maxScreenCol = 25;
+    final int maxScreenRow = 15;
 
-    final int screenWidth = default_TileSize * maxScreenCol; //1024
-    final int screenHeight = default_TileSize * getMaxScreenRow; //768
+    final int screenWidth = default_TileSize * maxScreenCol; //1200
+    final int screenHeight = default_TileSize * maxScreenRow; //960
 
     int FPS = 60;
 
     KeyManager KeyMan = new KeyManager();
     Thread gameThread;
     Player player = new Player(this, KeyMan);
+
+    TileManager tileManager = new TileManager(this);
     public Game() {
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.BLACK);
@@ -72,10 +75,27 @@ public class Game extends JPanel implements Runnable
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
-        Graphics2D g2D= (Graphics2D) g;
+        Graphics2D g2D = (Graphics2D) g;
 
+        tileManager.draw(g2D);
         player.draw(g2D);
 
         g2D.dispose();
+    }
+
+    public int getMaxScreenRow(){
+        return maxScreenRow;
+    }
+
+    public int getMaxScreenCol(){
+        return maxScreenCol;
+    }
+
+    public int getScreenWidth(){
+        return screenWidth;
+    }
+
+    public int getScreenHeight(){
+        return screenHeight;
     }
 }
