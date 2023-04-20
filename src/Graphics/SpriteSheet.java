@@ -33,13 +33,20 @@ public class SpriteSheet
         \param x numarul dalei din sprite sheet pe axa x.
         \param y numarul dalei din sprite sheet pe axa y.
      */
-    public BufferedImage crop(int x, int y, int width , int height)
-    {
+    public BufferedImage crop(int x, int y, int width , int height) {
             /// Subimaginea (dala) este regasita in sprite sheet specificad coltul stanga sus
             /// al imaginii si apoi latimea si inaltimea (totul in pixeli). Coltul din stanga sus al imaginii
             /// se obtine inmultind numarul de ordine al dalei cu dimensiunea in pixeli a unei dale.
         tileWidth = width;
         tileHeight = height;
-        return spriteSheet.getSubimage(x * width , y * height, width, height);
+        return spriteSheet.getSubimage(x * tileWidth , y * tileHeight, tileWidth, tileHeight);
+    }
+
+    public BufferedImage crop(int x, int y)
+    {
+        /// Subimaginea (dala) este regasita in sprite sheet specificad coltul stanga sus
+        /// al imaginii si apoi latimea si inaltimea (totul in pixeli). Coltul din stanga sus al imaginii
+        /// se obtine inmultind numarul de ordine al dalei cu dimensiunea in pixeli a unei dale.
+        return spriteSheet.getSubimage(x * tileWidth , y * tileHeight, tileWidth, tileHeight);
     }
 }

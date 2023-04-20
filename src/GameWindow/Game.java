@@ -1,5 +1,6 @@
 package GameWindow;
 
+import Entity.Player;
 import Input.KeyManager;
 
 import javax.swing.*;
@@ -15,7 +16,7 @@ import java.awt.*;
 public class Game extends JPanel implements Runnable
 {
     final int default_TileSize = 64;
-    int tileSize = default_TileSize;
+    public int tileSize = default_TileSize;
 
     final int maxScreenCol = 16;
     final int getMaxScreenRow = 12;
@@ -25,11 +26,9 @@ public class Game extends JPanel implements Runnable
 
     int FPS = 60;
 
-    int player_x = 100;
-    int player_y = 100;
-    int player_speed = 4;
-    Thread gameThread;
     KeyManager KeyMan = new KeyManager();
+    Thread gameThread;
+    Player player = new Player(this, KeyMan);
     public Game() {
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.BLACK);
@@ -46,7 +45,6 @@ public class Game extends JPanel implements Runnable
         double drawinterval = (double) 1000000000 /FPS;
         double nextDrawTime = System.nanoTime() + drawinterval;
         while (gameThread != null){
-            System.out.println("tagadam");
             update();
             repaint();
 
@@ -68,21 +66,7 @@ public class Game extends JPanel implements Runnable
     }
 
     public void update(){
-        if (KeyMan.W) {
-            player_y -= player_speed;
-        }
-
-        if (KeyMan.S) {
-            player_y += player_speed;
-        }
-
-        if (KeyMan.A) {
-            player_x -= player_speed;
-        }
-
-        if (KeyMan.D) {
-            player_x += player_speed;
-        }
+        player.update();
     }
 
     public void paintComponent(Graphics g){
@@ -90,9 +74,7 @@ public class Game extends JPanel implements Runnable
 
         Graphics2D g2D= (Graphics2D) g;
 
-        g2D.setColor(Color.white);
-
-        g2D.fillRect(player_x, player_y,64,64);
+        player.draw(g2D);
 
         g2D.dispose();
     }
