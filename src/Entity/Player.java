@@ -25,32 +25,38 @@ public class Player extends Entity{
 
     public void setDefaultValues(){
         x = gp.getScreenWidth() / 2 - 32;
-        y = gp.getScreenHeight() / 2 - 90;
+        y = gp.getScreenHeight() / 2 - 49;
+
+        world_x = gp.getDefaultTileSize() * gp.getMaxWorldCol()/2;
+        world_y = gp.getDefaultTileSize() * gp.getMaxWorldRow()/2;
+
         speed = 4;
         direction = "right";
-        texture_option = 0;
+        texture_option = 1;
     }
 
     public void update(){
         if (keyM.W) {
             direction = "up";
-            //y -= speed;
+            world_y -= speed;
         }
 
         if (keyM.S) {
             direction = "down";
-            //y += speed;
+            world_y += speed;
         }
 
         if (keyM.A) {
             direction = "left";
-           // x -= speed;
+            world_x -= speed;
         }
 
         if (keyM.D) {
             direction = "right";
-            //x += speed;
+            world_x += speed;
         }
+
+
     }
 
     public void draw(Graphics2D g2D){

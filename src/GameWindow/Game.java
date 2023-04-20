@@ -6,6 +6,7 @@ import Map.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ComponentListener;
 
 /*! \class GameWindow
     \brief Implementeaza notiunea de fereastra a jocului.
@@ -22,6 +23,8 @@ public class Game extends JPanel implements Runnable
     final int maxScreenCol = 25;
     final int maxScreenRow = 15;
 
+    int maxWorldCol = 2500;
+    int maxWorldRow = 1500;
     final int screenWidth = default_TileSize * maxScreenCol; //1200
     final int screenHeight = default_TileSize * maxScreenRow; //960
 
@@ -29,7 +32,7 @@ public class Game extends JPanel implements Runnable
 
     KeyManager KeyMan = new KeyManager();
     Thread gameThread;
-    Player player = new Player(this, KeyMan);
+    public Player player = new Player(this, KeyMan);
 
     TileManager tileManager = new TileManager(this);
     public Game() {
@@ -91,11 +94,23 @@ public class Game extends JPanel implements Runnable
         return maxScreenCol;
     }
 
+    public int getMaxWorldRow(){
+        return maxWorldRow;
+    }
+
+    public int getMaxWorldCol(){
+        return maxWorldCol;
+    }
+
     public int getScreenWidth(){
         return screenWidth;
     }
 
     public int getScreenHeight(){
         return screenHeight;
+    }
+
+    public int getDefaultTileSize(){
+        return default_TileSize;
     }
 }

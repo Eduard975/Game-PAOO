@@ -26,7 +26,7 @@ public class KeyManager implements KeyListener
        S = false;
        A = false;
        D = false;
-        // W A S D Esc Enter
+       // W A S D Esc Enter
     }
 
 

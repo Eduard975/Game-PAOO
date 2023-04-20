@@ -29,20 +29,30 @@ public class TileManager {
     }
 
     public void draw(Graphics2D g2D){
-        int col = 0, row = 0, x = 0, y = 0;
-        while(col < gp.getMaxScreenCol() && row < gp.getMaxScreenRow()){
-            if(col == 12 || row == 7)
-                g2D.drawImage(tiles[1].image, x ,y, 48, 48, null);
-            else
-                g2D.drawImage(tiles[0].image, x ,y, 48, 48, null);
-            col++;
-            x += 48;
+        int world_col = 0, world_row = 0;
 
-            if(col == gp.getMaxScreenCol()){
-                x = 0;
-                col = 0;
-                y += 48;
-                row++;
+        //Camera Jocului
+        while(world_col < gp.getMaxWorldCol() && world_row < gp.getMaxWorldRow()){
+            int world_x = world_col * gp.getDefaultTileSize();
+            int world_y = world_row * gp.getDefaultTileSize();
+
+            int screen_x = world_x + gp.player.x - gp.player.world_x;
+            int screen_y = world_y + gp.player.y - gp.player.world_y;
+
+
+            if(     world_x + gp.getDefaultTileSize() > gp.player.world_x - gp.player.x  &&
+                    world_x - gp.getDefaultTileSize() - 32 < gp.player.world_x + gp.player.x  &&
+                    world_y + gp.getDefaultTileSize() > gp.player.world_y - gp.player.y  &&
+                    world_y - gp.getDefaultTileSize() - 49< gp.player.world_y + gp.player.y
+            ) {
+                g2D.drawImage(tiles[0].image, screen_x, screen_y, 48, 48, null);
+            }
+
+            world_col++;
+
+            if(world_col == gp.getMaxWorldCol()){
+                world_col = 0;
+                world_row++;
             }
         }
     }

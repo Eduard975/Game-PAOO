@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Map/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
+    <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameWindow/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Input/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +38,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rino/Documents/PAOO/PAOO_Grigore&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/rino/Documents/PAOO/PAOO_Grigore",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -69,7 +76,7 @@
       <workItem from="1681276195993" duration="5917000" />
       <workItem from="1681903442714" duration="86000" />
       <workItem from="1681928098222" duration="1645000" />
-      <workItem from="1681979862884" duration="8399000" />
+      <workItem from="1681979862884" duration="21355000" />
     </task>
     <servers />
   </component>
@@ -86,5 +93,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="centrat player" />
+    <option name="LAST_COMMIT_MESSAGE" value="centrat player" />
   </component>
 </project>
