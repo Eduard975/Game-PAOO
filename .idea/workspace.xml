@@ -5,10 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
+      <change afterPath="$PROJECT_DIR$/src/Entity/CollisionCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/textures/PaooGameSpriteSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/textures/enemy_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/textures/floor_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/textures/player_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameWindow/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/ImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/ImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/PlayerAssets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/PlayerAssets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Input/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/Map.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/textures/PaooGameSpriteSheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Textures/PaooGameSpriteSheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/textures/enemy_sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Textures/enemy_sheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/textures/floor_sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Textures/floor_sheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/textures/player_sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Textures/player_sheet.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +44,17 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectId" id="2NvGv6qv35oTf1mzWEoGi97ltKP" />
   <component name="ProjectViewState">
@@ -44,10 +75,15 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\AC\PAOO_Grigore\src\Resources\Maps" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Run" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -70,6 +106,9 @@
       <workItem from="1681903442714" duration="86000" />
       <workItem from="1681928098222" duration="1645000" />
       <workItem from="1681979862884" duration="23032000" />
+      <workItem from="1682027676385" duration="599000" />
+      <workItem from="1682028614981" duration="2785000" />
+      <workItem from="1682069505425" duration="15721000" />
     </task>
     <servers />
   </component>
@@ -90,6 +129,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="centrat player" />
     <option name="LAST_COMMIT_MESSAGE" value="centrat player" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

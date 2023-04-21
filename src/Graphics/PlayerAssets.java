@@ -21,7 +21,7 @@ public class PlayerAssets {
     public static void Init(int option)
     {
         /// Se creaza temporar un obiect SpriteSheet initializat prin intermediul clasei ImageLoader
-        SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/textures/player_sheet.png"));
+        SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/Resources/Textures/player_sheet.png"));
 
 
         /// Se obtin subimaginile corespunzatoare elementelor necesare.

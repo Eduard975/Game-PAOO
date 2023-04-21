@@ -1,65 +1,82 @@
 package Entity;
 
 import GameWindow.Game;
-import Input.KeyManager;
 import Graphics.PlayerAssets;
+import Input.KeyManager;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Objects;
 
-public class Player extends Entity{
+public class Player extends Entity {
     Game gp;
     KeyManager keyM;
-
     public int texture_option;
 
-    public Player(Game gp, KeyManager keyM){
+    public Player(Game gp, KeyManager keyM) {
         this.gp = gp;
         this.keyM = keyM;
 
         setDefaultValues();
     }
 
-    public void setDefaultValues(){
-        x = gp.getScreenWidth() / 2 - 32;
-        y = gp.getScreenHeight() / 2 - 49;
+    public void setDefaultValues() {
+        x = gp.getScreenWidth() / 2;
+        y = gp.getScreenHeight() / 2;
 
-        world_x = gp.getDefaultTileSize() * gp.getMaxWorldCol()/2;
-        world_y = gp.getDefaultTileSize() * gp.getMaxWorldRow()/2;
+        world_x = gp.getDefaultTileSize() * gp.getMaxWorldCol() / 2 - 32;
+        world_y = gp.getDefaultTileSize() * gp.getMaxWorldRow() / 2 - 49;
+
+        hitBox = new Rectangle(25, 22, 20, 54);
 
         speed = 4;
         direction = "right";
-        texture_option = 1;
+        texture_option = 0;
     }
 
-    public void update(){
-        if (keyM.W) {
-            direction = "up";
-            world_y -= speed;
-        }
+    public void update() {
+        is_collided = false;
+        gp.colCheck.checkTile(this);
 
-        if (keyM.S) {
-            direction = "down";
-            world_y += speed;
-        }
+        if (!is_collided) {
+            if (keyM.W) {
+                direction = "up";
+                world_y -= speed;
+            }
 
-        if (keyM.A) {
-            direction = "left";
-            world_x -= speed;
-        }
+            if (keyM.S) {
+                direction = "down";
+                world_y += speed;
+            }
 
-        if (keyM.D) {
-            direction = "right";
-            world_x += speed;
-        }
+            if (keyM.A) {
+                direction = "left";
+                world_x -= speed;
+            }
 
+            if (keyM.D) {
+                direction = "right";
+                world_x += speed;
+            }
+        } else {
+            if (keyM.W) {
+                direction = "up";
+            }
+
+            if (keyM.S) {
+                direction = "down";
+            }
+
+            if (keyM.A) {
+                direction = "left";
+            }
+
+            if (keyM.D) {
+                direction = "right";
+            }
+        }
 
     }
 
-    public void draw(Graphics2D g2D){
+    public void draw(Graphics2D g2D) {
         PlayerAssets.Init(texture_option);
 
         switch (direction) {

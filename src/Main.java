@@ -1,7 +1,7 @@
-import GameWindow.*;
+import GameWindow.Game;
+
 import javax.swing.*;
 
-//make UML Ctrl+Alt+Shift+U
 public class Main {
     public static void main(String[] args) {
         JFrame window = new JFrame();

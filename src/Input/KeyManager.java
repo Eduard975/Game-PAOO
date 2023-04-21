@@ -10,38 +10,25 @@ import java.awt.event.KeyListener;
     In program trebuie sa se tina cont de flagul aferent tastei de interes. Daca flagul respectiv este true inseamna
     ca tasta respectiva a fost apasata si false nu a fost apasata.
  */
-public class KeyManager implements KeyListener
-{
+public class KeyManager implements KeyListener {
     public boolean W;      /*!< Flag pentru tasta "sus" apasata.*/
     public boolean S;    /*!< Flag pentru tasta "jos" apasata.*/
     public boolean A;    /*!< Flag pentru tasta "stanga" apasata.*/
     public boolean D;   /*!< Flag pentru tasta "dreapta" apasata.*/
 
-    /*! \fn public KeyManager()
-        \brief Constructorul clasei.
-     */
-    public KeyManager()
-    {
-       W = false;
-       S = false;
-       A = false;
-       D = false;
-       // W A S D Esc Enter
+    public KeyManager() {
+        W = false;
+        S = false;
+        A = false;
+        D = false;
     }
 
 
-    public void Update(KeyEvent e)
-    {
+    public void Update(KeyEvent e) {
     }
 
-    /*! \fn public void keyPressed(KeyEvent e)
-        \brief Functie ce va fi apelata atunci cand un un eveniment de tasta apasata este generat.
-
-         \param e obiectul eveniment de tastatura.
-     */
     @Override
-    public void keyPressed(KeyEvent e)
-    {
+    public void keyPressed(KeyEvent e) {
         ///se retine in vectorul de flaguri ca o tasta a fost apasata.
         int code = e.getKeyCode();
         switch (code) {
@@ -52,15 +39,9 @@ public class KeyManager implements KeyListener
         }
     }
 
-    /*! \fn public void keyReleased(KeyEvent e)
-        \brief Functie ce va fi apelata atunci cand un un eveniment de tasta eliberata este generat.
-
-         \param e obiectul eveniment de tastatura.
-     */
     @Override
-    public void keyReleased(KeyEvent e)
-    {
-            ///se retine in vectorul de flaguri ca o tasta a fost eliberata.
+    public void keyReleased(KeyEvent e) {
+        ///se retine in vectorul de flaguri ca o tasta a fost eliberata.
         int code = e.getKeyCode();
         switch (code) {
             case KeyEvent.VK_W -> W = false;
@@ -70,13 +51,4 @@ public class KeyManager implements KeyListener
         }
     }
 
-    /*! \fn public void keyTyped(KeyEvent e)
-        \brief Functie ce va fi apelata atunci cand o tasta a fost apasata si eliberata.
-        Momentan aceasta functie nu este utila in program.
-     */
-    @Override
-    public void keyTyped(KeyEvent e)
-    {
-
-    }
 }

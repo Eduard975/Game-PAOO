@@ -1,12 +1,12 @@
 package GameWindow;
 
+import Entity.CollisionCheck;
 import Entity.Player;
 import Input.KeyManager;
 import Map.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ComponentListener;
 
 /*! \class GameWindow
     \brief Implementeaza notiunea de fereastra a jocului.
@@ -15,50 +15,57 @@ import java.awt.event.ComponentListener;
     ferestre grafice si totodata si cea a unui container (toate elementele
     grafice vor fi continute de fereastra).
  */
-public class Game extends JPanel implements Runnable
-{
+public class Game extends JPanel implements Runnable {
     final int default_TileSize = 48;
     public int tileSize = default_TileSize;
 
+    //Camera parameters
     final int maxScreenCol = 25;
     final int maxScreenRow = 15;
-
-    int maxWorldCol = 2500;
-    int maxWorldRow = 1500;
     final int screenWidth = default_TileSize * maxScreenCol; //1200
     final int screenHeight = default_TileSize * maxScreenRow; //920
 
+
+    //World parameters
+    int maxWorldCol = 75;
+    int maxWorldRow = 45;
+    final int worldWidth = default_TileSize * maxWorldCol;
+    final int worldHeight = default_TileSize * maxWorldRow;
     int FPS = 60;
 
     KeyManager KeyMan = new KeyManager();
     Thread gameThread;
     public Player player = new Player(this, KeyMan);
 
-    TileManager tileManager = new TileManager(this);
+    public CollisionCheck colCheck = new CollisionCheck(this);
+    public TileManager tileManager = new TileManager(this);
+
     public Game() {
-        this.setPreferredSize(new Dimension(screenWidth,screenHeight));
+        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
         this.addKeyListener(KeyMan);
         this.setFocusable(true);
     }
-    public void startGameThread(){
+
+    public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
     }
+
     @Override
     public void run() {
-        double drawinterval = (double) 1000000000 /FPS;
+        double drawinterval = (double) 1000000000 / FPS;
         double nextDrawTime = System.nanoTime() + drawinterval;
-        while (gameThread != null){
+        while (gameThread != null) {
             update();
             repaint();
 
             try {
                 double remaningTime = nextDrawTime - System.nanoTime();
-                remaningTime = remaningTime/1000000;
+                remaningTime = remaningTime / 1000000;
 
-                if(remaningTime < 0)
+                if (remaningTime < 0)
                     remaningTime = 0;
 
                 Thread.sleep((long) remaningTime);
@@ -71,11 +78,11 @@ public class Game extends JPanel implements Runnable
         }
     }
 
-    public void update(){
+    public void update() {
         player.update();
     }
 
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
         Graphics2D g2D = (Graphics2D) g;
@@ -86,31 +93,23 @@ public class Game extends JPanel implements Runnable
         g2D.dispose();
     }
 
-    public int getMaxScreenRow(){
-        return maxScreenRow;
-    }
-
-    public int getMaxScreenCol(){
-        return maxScreenCol;
-    }
-
-    public int getMaxWorldRow(){
+    public int getMaxWorldRow() {
         return maxWorldRow;
     }
 
-    public int getMaxWorldCol(){
+    public int getMaxWorldCol() {
         return maxWorldCol;
     }
 
-    public int getScreenWidth(){
+    public int getScreenWidth() {
         return screenWidth;
     }
 
-    public int getScreenHeight(){
+    public int getScreenHeight() {
         return screenHeight;
     }
 
-    public int getDefaultTileSize(){
+    public int getDefaultTileSize() {
         return default_TileSize;
     }
 }
