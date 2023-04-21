@@ -2,21 +2,16 @@ package GameWindow;
 
 import Entity.CollisionCheck;
 import Entity.Player;
+import Graphics.AssetsSetter;
 import Input.KeyManager;
 import Map.TileManager;
+import Objects.SuperObject;
 
 import javax.swing.*;
 import java.awt.*;
 
-/*! \class GameWindow
-    \brief Implementeaza notiunea de fereastra a jocului.
-
-    Membrul wndFrame este un obiect de tip JFrame care va avea utilitatea unei
-    ferestre grafice si totodata si cea a unui container (toate elementele
-    grafice vor fi continute de fereastra).
- */
 public class Game extends JPanel implements Runnable {
-    final int default_TileSize = 48;
+    static final int default_TileSize = 48;
     public int tileSize = default_TileSize;
 
     //Camera parameters
@@ -35,8 +30,10 @@ public class Game extends JPanel implements Runnable {
 
     KeyManager KeyMan = new KeyManager();
     Thread gameThread;
-    public Player player = new Player(this, KeyMan);
+    public Player player = Player.getInstance(this, KeyMan);
 
+    public AssetsSetter assets_setter = new AssetsSetter(this);
+    public SuperObject[] obj = new SuperObject[6];
     public CollisionCheck colCheck = new CollisionCheck(this);
     public TileManager tileManager = new TileManager(this);
 
@@ -46,6 +43,10 @@ public class Game extends JPanel implements Runnable {
         this.setDoubleBuffered(true);
         this.addKeyListener(KeyMan);
         this.setFocusable(true);
+    }
+
+    public void setupGame() {
+        assets_setter.setObject();
     }
 
     public void startGameThread() {
@@ -60,7 +61,6 @@ public class Game extends JPanel implements Runnable {
         while (gameThread != null) {
             update();
             repaint();
-
             try {
                 double remaningTime = nextDrawTime - System.nanoTime();
                 remaningTime = remaningTime / 1000000;
@@ -88,6 +88,9 @@ public class Game extends JPanel implements Runnable {
         Graphics2D g2D = (Graphics2D) g;
 
         tileManager.draw(g2D);
+
+        obj[0].draw(g2D, this);
+
         player.draw(g2D);
 
         g2D.dispose();
@@ -109,7 +112,7 @@ public class Game extends JPanel implements Runnable {
         return screenHeight;
     }
 
-    public int getDefaultTileSize() {
+    public static int getDefaultTileSize() {
         return default_TileSize;
     }
 }

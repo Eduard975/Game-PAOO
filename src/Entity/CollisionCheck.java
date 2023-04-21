@@ -38,22 +38,22 @@ public class CollisionCheck {
                 }
             }
             case "left" -> {
-                tileNum1 = gp.tileManager.map[entityLeft_col][entityTop_row];
-                tileNum2 = gp.tileManager.map[entityLeft_col][entityTop_row + 1];
-                int tileNum3 = gp.tileManager.map[entityLeft_col][entityBottom_row];
-                if (gp.tileManager.getCollision(tileNum1) || gp.tileManager.getCollision(tileNum2) || gp.tileManager.getCollision(tileNum3)) {
-                    entity.is_collided = true;
-                }
+                tileNum(entity, entityLeft_col, entityTop_row, entityBottom_row);
             }
             case "right" -> {
-                tileNum1 = gp.tileManager.map[entityRight_col][entityTop_row];
-                tileNum2 = gp.tileManager.map[entityRight_col][entityTop_row + 1];
-                int tileNum3 = gp.tileManager.map[entityRight_col][entityBottom_row];
-                if (gp.tileManager.getCollision(tileNum1) || gp.tileManager.getCollision(tileNum2) || gp.tileManager.getCollision(tileNum3)) {
-                    entity.is_collided = true;
-                }
+                tileNum(entity, entityRight_col, entityTop_row, entityBottom_row);
             }
         }
     }
 
+    private void tileNum(Entity entity, int entityLeft_col, int entityTop_row, int entityBottom_row) {
+        int tileNum1;
+        int tileNum2;
+        tileNum1 = gp.tileManager.map[entityLeft_col][entityTop_row];
+        tileNum2 = gp.tileManager.map[entityLeft_col][entityTop_row + 1];
+        int tileNum3 = gp.tileManager.map[entityLeft_col][entityBottom_row];
+        if (gp.tileManager.getCollision(tileNum1) || gp.tileManager.getCollision(tileNum2) || gp.tileManager.getCollision(tileNum3)) {
+            entity.is_collided = true;
+        }
+    }
 }

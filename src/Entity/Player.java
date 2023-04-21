@@ -9,13 +9,22 @@ import java.awt.*;
 public class Player extends Entity {
     Game gp;
     KeyManager keyM;
+    private static Player player = null;
     public int texture_option;
 
-    public Player(Game gp, KeyManager keyM) {
+    private Player(Game gp, KeyManager keyM) {
         this.gp = gp;
         this.keyM = keyM;
 
         setDefaultValues();
+    }
+
+    public static Player getInstance(Game gp, KeyManager keyM) {
+        if (player == null) {
+            player = new Player(gp, keyM);
+        }
+
+        return player;
     }
 
     public void setDefaultValues() {

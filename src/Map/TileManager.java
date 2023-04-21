@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class TileManager {
     Game gp;
     Tile[] tiles;
-
     public int[][] map;
 
     public TileManager(Game gp) {
