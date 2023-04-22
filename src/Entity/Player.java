@@ -42,7 +42,7 @@ public class Player extends Entity {
 
         speed = 4;
         direction = "right";
-        texture_option = 0;
+        texture_option = 1;
     }
 
     public void update() {
