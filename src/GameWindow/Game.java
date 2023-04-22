@@ -22,8 +22,8 @@ public class Game extends JPanel implements Runnable {
 
 
     //World parameters
-    int maxWorldCol = 75;
-    int maxWorldRow = 45;
+    int maxWorldCol = 101;
+    int maxWorldRow = 61;
     final int worldWidth = default_TileSize * maxWorldCol;
     final int worldHeight = default_TileSize * maxWorldRow;
     int FPS = 60;
@@ -31,9 +31,8 @@ public class Game extends JPanel implements Runnable {
     KeyManager KeyMan = new KeyManager();
     Thread gameThread;
     public Player player = Player.getInstance(this, KeyMan);
-
     public AssetsSetter assets_setter = new AssetsSetter(this);
-    public SuperObject[] obj = new SuperObject[6];
+    public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
     public TileManager tileManager = new TileManager(this);
 
@@ -56,8 +55,8 @@ public class Game extends JPanel implements Runnable {
 
     @Override
     public void run() {
-        double drawinterval = (double) 1000000000 / FPS;
-        double nextDrawTime = System.nanoTime() + drawinterval;
+        double draw_interval = (double) 1000000000 / FPS;
+        double nextDrawTime = System.nanoTime() + draw_interval;
         while (gameThread != null) {
             update();
             repaint();
@@ -70,7 +69,7 @@ public class Game extends JPanel implements Runnable {
 
                 Thread.sleep((long) remaningTime);
 
-                nextDrawTime += drawinterval;
+                nextDrawTime += draw_interval;
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -89,8 +88,12 @@ public class Game extends JPanel implements Runnable {
 
         tileManager.draw(g2D);
 
-        obj[0].draw(g2D, this);
-
+        for (SuperObject superObject : obj) {
+            if (superObject != null) {
+                superObject.draw(g2D, this);
+            }
+        }
+        
         player.draw(g2D);
 
         g2D.dispose();

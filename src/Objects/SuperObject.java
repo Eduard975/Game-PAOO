@@ -8,7 +8,9 @@ import java.awt.image.BufferedImage;
 public class SuperObject {
     public BufferedImage image;
     public String name;
-    public boolean collision = false;
+    public Rectangle hitBox = new Rectangle(0, 0, 48, 48);
+    public int original_hitbox_x = 0, original_hitbox_y = 0;
+    public boolean isSolid = false;
     public int x, y;
 
     public void setCoords(int col, int row) {
@@ -29,5 +31,4 @@ public class SuperObject {
         }
 
     }
-
 }

@@ -5,6 +5,7 @@ import Graphics.PlayerAssets;
 import Input.KeyManager;
 
 import java.awt.*;
+import java.util.Objects;
 
 public class Player extends Entity {
     Game gp;
@@ -31,10 +32,13 @@ public class Player extends Entity {
         x = gp.getScreenWidth() / 2;
         y = gp.getScreenHeight() / 2;
 
-        world_x = gp.getDefaultTileSize() * gp.getMaxWorldCol() / 2 - 32;
-        world_y = gp.getDefaultTileSize() * gp.getMaxWorldRow() / 2 - 49;
+        world_x = Game.getDefaultTileSize() * gp.getMaxWorldCol() / 2 - 32;
+        world_y = Game.getDefaultTileSize() * gp.getMaxWorldRow() / 2 - 49;
 
         hitBox = new Rectangle(25, 22, 20, 54);
+
+        original_hitbox_x = hitBox.x;
+        original_hitbox_y = hitBox.y;
 
         speed = 4;
         direction = "right";
@@ -44,6 +48,9 @@ public class Player extends Entity {
     public void update() {
         is_collided = false;
         gp.colCheck.checkTile(this);
+
+        int Obj_index = gp.colCheck.checkObject(this, true);
+        pickupObject(Obj_index);
 
         if (!is_collided) {
             if (keyM.W) {
@@ -83,6 +90,18 @@ public class Player extends Entity {
             }
         }
 
+    }
+
+    public void pickupObject(int index) {
+        if (index != 999) {
+            String objName = gp.obj[index].name;
+            if (Objects.equals(objName, "keyBoard")) {
+                gp.obj[index] = null;
+                System.out.println("Old speed: " + speed);
+                speed += 2;
+                System.out.println("New speed: " + speed);
+            }
+        }
     }
 
     public void draw(Graphics2D g2D) {
