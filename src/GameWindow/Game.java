@@ -93,7 +93,7 @@ public class Game extends JPanel implements Runnable {
                 superObject.draw(g2D, this);
             }
         }
-        
+
         player.draw(g2D);
 
         g2D.dispose();
