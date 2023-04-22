@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/ItemAssets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/ItemAssets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/CollisionCheck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameWindow/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +86,7 @@
       <workItem from="1682027676385" duration="599000" />
       <workItem from="1682028614981" duration="2785000" />
       <workItem from="1682069505425" duration="48253000" />
-      <workItem from="1682158130258" duration="4627000" />
+      <workItem from="1682158130258" duration="5095000" />
     </task>
     <servers />
   </component>
