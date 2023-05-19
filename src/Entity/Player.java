@@ -100,6 +100,7 @@ public class Player extends Entity {
                 System.out.println("Old speed: " + speed);
                 speed += 2;
                 System.out.println("New speed: " + speed);
+                System.out.println("------------------------------------");
             }
         }
     }

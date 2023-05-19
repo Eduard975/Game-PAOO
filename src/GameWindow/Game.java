@@ -3,6 +3,7 @@ package GameWindow;
 import Entity.CollisionCheck;
 import Entity.Player;
 import Graphics.AssetsSetter;
+import Graphics.UI;
 import Input.KeyManager;
 import Map.TileManager;
 import Objects.SuperObject;
@@ -22,19 +23,21 @@ public class Game extends JPanel implements Runnable {
 
 
     //World parameters
-    int maxWorldCol = 101;
-    int maxWorldRow = 61;
+    int maxWorldCol = 1500; //1500
+    int maxWorldRow = 2500; //2500
     final int worldWidth = default_TileSize * maxWorldCol;
     final int worldHeight = default_TileSize * maxWorldRow;
-    int FPS = 60;
+    int FPS = 600;
 
     KeyManager KeyMan = new KeyManager();
     Thread gameThread;
     public Player player = Player.getInstance(this, KeyMan);
     public AssetsSetter assets_setter = new AssetsSetter(this);
+    public UI ui = new UI(this);
     public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
     public TileManager tileManager = new TileManager(this);
+
 
     public Game() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -95,6 +98,8 @@ public class Game extends JPanel implements Runnable {
         }
 
         player.draw(g2D);
+
+        ui.draw(g2D);
 
         g2D.dispose();
     }

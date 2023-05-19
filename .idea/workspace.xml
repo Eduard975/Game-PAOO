@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
+      <change afterPath="$PROJECT_DIR$/src/Graphics/UI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Resources/Maps/map2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/CollisionCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/CollisionCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameWindow/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +52,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rino/Documents/PAOO/PAOO_Grigore&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rino/Documents/PAOO/mapgen&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -94,6 +101,15 @@
       <workItem from="1682181969916" duration="662000" />
       <workItem from="1682186229096" duration="20000" />
       <workItem from="1682187565080" duration="2259000" />
+      <workItem from="1682485413292" duration="4261000" />
+      <workItem from="1682489701392" duration="1356000" />
+      <workItem from="1682491138895" duration="34000" />
+      <workItem from="1683003985213" duration="153000" />
+      <workItem from="1683090435211" duration="616000" />
+      <workItem from="1683606613325" duration="223000" />
+      <workItem from="1683694497963" duration="711000" />
+      <workItem from="1684299932246" duration="4747000" />
+      <workItem from="1684484561435" duration="317000" />
     </task>
     <servers />
   </component>

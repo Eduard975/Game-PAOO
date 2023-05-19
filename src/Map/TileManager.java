@@ -15,26 +15,24 @@ public class TileManager {
     public TileManager(Game gp) {
         this.gp = gp;
         tiles = new Tile[4];
-        map = new int[gp.getMaxWorldCol()][gp.getMaxWorldRow()];
+        map = new int[gp.getMaxWorldRow()][gp.getMaxWorldCol()];
         generateTiles();
-        loadMap("src/Resources/Maps/map.txt");
+        loadMap("src/Resources/Maps/map2.txt");
     }
 
     public void loadMap(String path) {
         try {
             Scanner fin = new Scanner(new File(path));
-
+            System.out.println(fin.nextInt());
             int col = 0;
             int row = 0;
 
-            while (col < gp.getMaxWorldCol() && row < gp.getMaxWorldRow() && fin.hasNextInt()) {
-                map[col][row] = fin.nextInt();
-                col++;
-                if (col == gp.getMaxWorldCol()) {
-                    col = 0;
-                    row++;
-                }
-            }
+            for (row = 0; row < gp.getMaxWorldRow(); row++)
+                for (col = 0; col < gp.getMaxWorldCol(); col++)
+                    if (fin.hasNextInt()) {
+                        map[row][col] = fin.nextInt();
+                        System.out.println(row + " " + col);
+                    }
 
             fin.close();
         } catch (Exception e) {
@@ -78,7 +76,7 @@ public class TileManager {
                     world_y + Game.getDefaultTileSize() > gp.player.world_y - gp.player.y &&
                     world_y - Game.getDefaultTileSize() - 49 < gp.player.world_y + gp.player.y
             ) {
-                int tileType = map[world_col][world_row];
+                int tileType = map[world_row][world_col];
 
                 g2D.drawImage(tiles[tileType].image, screen_x, screen_y, 48, 48, null);
             }

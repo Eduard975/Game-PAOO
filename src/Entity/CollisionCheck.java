@@ -37,17 +37,17 @@ public class CollisionCheck {
     }
 
     private void tileNum_up_down(Entity entity, int entityLeft_col, int entityRight_col, int entity_row) {
-        int tileNum1 = gp.tileManager.map[entityLeft_col][entity_row];
-        int tileNum2 = gp.tileManager.map[entityRight_col][entity_row];
+        int tileNum1 = gp.tileManager.map[entity_row][entityLeft_col];
+        int tileNum2 = gp.tileManager.map[entity_row][entityRight_col];
         if (gp.tileManager.getCollision(tileNum1) || gp.tileManager.getCollision(tileNum2)) {
             entity.is_collided = true;
         }
     }
 
     private void tileNum_left_right(Entity entity, int entity_col, int entityTop_row, int entityBottom_row) {
-        int tileNum1 = gp.tileManager.map[entity_col][entityTop_row];
-        int tileNum2 = gp.tileManager.map[entity_col][entityTop_row + 1];
-        int tileNum3 = gp.tileManager.map[entity_col][entityBottom_row];
+        int tileNum1 = gp.tileManager.map[entityTop_row][entity_col];
+        int tileNum2 = gp.tileManager.map[entityTop_row][entity_col + 1];
+        int tileNum3 = gp.tileManager.map[entityBottom_row][entity_col];
         if (gp.tileManager.getCollision(tileNum1) || gp.tileManager.getCollision(tileNum2) || gp.tileManager.getCollision(tileNum3)) {
             entity.is_collided = true;
         }
