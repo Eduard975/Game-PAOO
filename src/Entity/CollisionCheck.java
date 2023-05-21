@@ -15,10 +15,10 @@ public class CollisionCheck {
         int entityTop_y = entity.world_y + entity.hitBox.y;
         int entityBottom_y = entity.world_y + entity.hitBox.y + entity.hitBox.height;
 
-        int entityLeft_col = (entityLeft_x - entity.speed) / Game.getDefaultTileSize();
-        int entityRight_col = (entityRight_x + entity.speed) / Game.getDefaultTileSize();
-        int entityTop_row = (entityTop_y - entity.speed) / Game.getDefaultTileSize();
-        int entityBottom_row = (entityBottom_y + entity.speed) / Game.getDefaultTileSize();
+        int entityLeft_col = (entityLeft_x - entity.speed) / Game.getDefaultTileSize_s();
+        int entityRight_col = (entityRight_x + entity.speed) / Game.getDefaultTileSize_s();
+        int entityTop_row = (entityTop_y - entity.speed) / Game.getDefaultTileSize_s();
+        int entityBottom_row = (entityBottom_y + entity.speed) / Game.getDefaultTileSize_s();
 
         switch (entity.direction) {
             case "up" -> {

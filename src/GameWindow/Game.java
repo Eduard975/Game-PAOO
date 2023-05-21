@@ -13,7 +13,7 @@ import java.awt.*;
 
 public class Game extends JPanel implements Runnable {
     static final int default_TileSize = 48;
-    public int tileSize = default_TileSize;
+    //public int tileSize = default_TileSize;
 
     //Camera parameters
     final int maxScreenCol = 25;
@@ -21,22 +21,22 @@ public class Game extends JPanel implements Runnable {
     final int screenWidth = default_TileSize * maxScreenCol; //1200
     final int screenHeight = default_TileSize * maxScreenRow; //920
 
-
     //World parameters
-    int maxWorldCol = 1500; //1500
-    int maxWorldRow = 2500; //2500
-    final int worldWidth = default_TileSize * maxWorldCol;
-    final int worldHeight = default_TileSize * maxWorldRow;
+    int maxWorldCol = 0; //1500
+    int maxWorldRow = 0; //2500
     int FPS = 600;
 
-    KeyManager KeyMan = new KeyManager();
+    boolean playState;
+    int menuState;
+
+    KeyManager KeyMan = new KeyManager(this);
     Thread gameThread;
+    public UI ui = new UI(this);
+    public TileManager tileManager = new TileManager(this);
     public Player player = Player.getInstance(this, KeyMan);
     public AssetsSetter assets_setter = new AssetsSetter(this);
-    public UI ui = new UI(this);
     public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
-    public TileManager tileManager = new TileManager(this);
 
 
     public Game() {
@@ -45,10 +45,13 @@ public class Game extends JPanel implements Runnable {
         this.setDoubleBuffered(true);
         this.addKeyListener(KeyMan);
         this.setFocusable(true);
+
     }
 
     public void setupGame() {
         assets_setter.setObject();
+        playState = false;
+        menuState = 1;
     }
 
     public void startGameThread() {
@@ -81,7 +84,9 @@ public class Game extends JPanel implements Runnable {
     }
 
     public void update() {
-        player.update();
+        if (playState) {
+            player.update();
+        }
     }
 
     public void paintComponent(Graphics g) {
@@ -89,17 +94,22 @@ public class Game extends JPanel implements Runnable {
 
         Graphics2D g2D = (Graphics2D) g;
 
-        tileManager.draw(g2D);
+        if (menuState == 1) {
+            ui.draw(g2D);
+        } else {
+            tileManager.draw(g2D);
 
-        for (SuperObject superObject : obj) {
-            if (superObject != null) {
-                superObject.draw(g2D, this);
+            ui.draw(g2D);
+
+            for (SuperObject superObject : obj) {
+                if (superObject != null) {
+                    superObject.draw(g2D, this);
+                }
             }
+
+            player.draw(g2D);
         }
 
-        player.draw(g2D);
-
-        ui.draw(g2D);
 
         g2D.dispose();
     }
@@ -120,7 +130,37 @@ public class Game extends JPanel implements Runnable {
         return screenHeight;
     }
 
-    public static int getDefaultTileSize() {
+    public void setMaxWorldRow(int x) {
+        maxWorldRow = x;
+    }
+
+    public void setMaxWorldCol(int x) {
+        maxWorldCol = x;
+    }
+
+    public boolean getPlayState() {
+        return playState;
+    }
+
+    public void setPlayState(boolean x) {
+        playState = x;
+    }
+
+    public int getMenuState() {
+        return menuState;
+    }
+
+    public void setMenuState(int x) {
+        menuState = x;
+    }
+
+    public static int getDefaultTileSize_s() {
         return default_TileSize;
     }
+
+    public int getDefaultTileSize() {
+        return default_TileSize;
+    }
+
+
 }

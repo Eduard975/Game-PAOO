@@ -32,8 +32,8 @@ public class Player extends Entity {
         x = gp.getScreenWidth() / 2;
         y = gp.getScreenHeight() / 2;
 
-        world_x = Game.getDefaultTileSize() * gp.getMaxWorldCol() / 2 - 32;
-        world_y = Game.getDefaultTileSize() * gp.getMaxWorldRow() / 2 - 49;
+        world_x = Game.getDefaultTileSize_s() * gp.getMaxWorldCol() / 2 - 32;
+        world_y = Game.getDefaultTileSize_s() * gp.getMaxWorldRow() / 2 - 80;
 
         hitBox = new Rectangle(25, 22, 20, 54);
 
@@ -42,7 +42,7 @@ public class Player extends Entity {
 
         speed = 4;
         direction = "right";
-        texture_option = 1;
+        texture_option = 0;
     }
 
     public void update() {
@@ -114,5 +114,17 @@ public class Player extends Entity {
         }
 
         g2D.drawImage(texture, x, y, 64, 98, null);
+    }
+
+    public void setTexture_option(int texture_option) {
+        this.texture_option = texture_option;
+    }
+
+    public void updateCoords() {
+        x = gp.getScreenWidth() / 2;
+        y = gp.getScreenHeight() / 2;
+
+        world_x = Game.getDefaultTileSize_s() * gp.getMaxWorldCol() / 2 - 32;
+        world_y = Game.getDefaultTileSize_s() * gp.getMaxWorldRow() / 2 - 80;
     }
 }

@@ -5,33 +5,50 @@ import Graphics.Assets;
 
 import java.awt.*;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class TileManager {
     Game gp;
     Tile[] tiles;
     public int[][] map;
+    String path = "src/Resources/Maps/map.txt";
+    int map_option = 0;
 
     public TileManager(Game gp) {
         this.gp = gp;
         tiles = new Tile[4];
-        map = new int[gp.getMaxWorldRow()][gp.getMaxWorldCol()];
+
+        try {
+            Scanner fin = new Scanner(new File(path));
+            int row = fin.nextInt();
+            int col = fin.nextInt();
+
+            gp.setMaxWorldRow(row);
+
+            gp.setMaxWorldCol(col);
+            map = new int[row][col];
+            System.out.println(row + " " + col);
+            fin.close();
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
         generateTiles();
-        loadMap("src/Resources/Maps/map2.txt");
+        loadMap(path);
     }
 
     public void loadMap(String path) {
         try {
             Scanner fin = new Scanner(new File(path));
-            System.out.println(fin.nextInt());
-            int col = 0;
-            int row = 0;
+            int row = fin.nextInt(); //ignor primele 2 valori din fisier
+            int col = fin.nextInt();
 
             for (row = 0; row < gp.getMaxWorldRow(); row++)
                 for (col = 0; col < gp.getMaxWorldCol(); col++)
                     if (fin.hasNextInt()) {
                         map[row][col] = fin.nextInt();
-                        System.out.println(row + " " + col);
                     }
 
             fin.close();
@@ -65,16 +82,16 @@ public class TileManager {
 
         //Camera Jocului
         while (world_col < gp.getMaxWorldCol() && world_row < gp.getMaxWorldRow()) {
-            int world_x = world_col * Game.getDefaultTileSize();
-            int world_y = world_row * Game.getDefaultTileSize();
+            int world_x = world_col * Game.getDefaultTileSize_s();
+            int world_y = world_row * Game.getDefaultTileSize_s();
 
             int screen_x = world_x + gp.player.x - gp.player.world_x;
             int screen_y = world_y + gp.player.y - gp.player.world_y;
 
-            if (world_x + Game.getDefaultTileSize() > gp.player.world_x - gp.player.x &&
-                    world_x - Game.getDefaultTileSize() - 32 < gp.player.world_x + gp.player.x &&
-                    world_y + Game.getDefaultTileSize() > gp.player.world_y - gp.player.y &&
-                    world_y - Game.getDefaultTileSize() - 49 < gp.player.world_y + gp.player.y
+            if (world_x + Game.getDefaultTileSize_s() > gp.player.world_x - gp.player.x &&
+                    world_x - Game.getDefaultTileSize_s() - 32 < gp.player.world_x + gp.player.x &&
+                    world_y + Game.getDefaultTileSize_s() > gp.player.world_y - gp.player.y &&
+                    world_y - Game.getDefaultTileSize_s() - 49 < gp.player.world_y + gp.player.y
             ) {
                 int tileType = map[world_row][world_col];
 
@@ -90,7 +107,44 @@ public class TileManager {
         }
     }
 
+    public void changeMap(int map_option) {
+        if (map_option != this.map_option) {
+            map = null;
+            switch (map_option) {
+                case 1 -> {
+                    path = "src/Resources/Maps/map.txt";
+
+                }
+                case 2 -> {
+                    path = "src/Resources/Maps/map2.txt";
+                }
+            }
+
+            this.map_option = map_option;
+
+            try {
+                Scanner fin = new Scanner(new File(path));
+                int row = fin.nextInt();
+                int col = fin.nextInt();
+
+                gp.setMaxWorldRow(row);
+
+                gp.setMaxWorldCol(col);
+                map = new int[row][col];
+                System.out.println(row + " " + col);
+                fin.close();
+
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+
+            generateTiles();
+            loadMap(path);
+        }
+    }
+
     public boolean getCollision(int tileNum) {
         return tiles[tileNum].collision;
     }
+
 }
