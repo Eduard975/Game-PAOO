@@ -115,7 +115,7 @@ public class Player extends Entity {
             case "right" -> texture = PlayerAssets.heroRight;
         }
 
-        g2D.drawImage(texture, x, y, 64, 98, null);
+        g2D.drawImage(texture, x - 40, y, 64, 98, null);
     }
 
     public void setTexture_option(int texture_option) {

@@ -64,7 +64,8 @@ public class UI {
                 subMenuState = 4;
 
             }
-            g2D.drawString("" + playTime_min + dFormat.format(playTime_sec), gp.getScreenWidth() / 2 - 10, 50);
+            String text = playTime_min + dFormat.format(playTime_sec);
+            g2D.drawString(text, getCenterX(g2D, text), 50);
             if (playTime_min == 1) {
                 gp.setMenuState(true);
                 gp.setPlayState(false);
