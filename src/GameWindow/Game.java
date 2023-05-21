@@ -24,10 +24,10 @@ public class Game extends JPanel implements Runnable {
     //World parameters
     int maxWorldCol = 0; //1500
     int maxWorldRow = 0; //2500
-    int FPS = 60000;
+    int FPS = 60;
 
     boolean playState;
-    int menuState;
+    boolean menuState;
 
     KeyManager KeyMan = new KeyManager(this);
     Thread gameThread;
@@ -51,7 +51,7 @@ public class Game extends JPanel implements Runnable {
     public void setupGame() {
         assets_setter.setObject();
         playState = false;
-        menuState = 1;
+        menuState = true;
     }
 
     public void startGameThread() {
@@ -94,12 +94,10 @@ public class Game extends JPanel implements Runnable {
 
         Graphics2D g2D = (Graphics2D) g;
 
-        if (menuState == 1) {
+        if (menuState) {
             ui.draw(g2D);
         } else {
             tileManager.draw(g2D);
-
-            ui.draw(g2D);
 
             for (SuperObject superObject : obj) {
                 if (superObject != null) {
@@ -108,6 +106,8 @@ public class Game extends JPanel implements Runnable {
             }
 
             player.draw(g2D);
+
+            ui.draw(g2D);
         }
 
 
@@ -146,11 +146,11 @@ public class Game extends JPanel implements Runnable {
         playState = x;
     }
 
-    public int getMenuState() {
+    public boolean getMenuState() {
         return menuState;
     }
 
-    public void setMenuState(int x) {
+    public void setMenuState(boolean x) {
         menuState = x;
     }
 

@@ -16,7 +16,7 @@ public class UI {
 
     BufferedImage[] maps;
 
-    int subMenuState = 0; // 0 - first screen, 1 - char selection, 2 - map selection, 3-run done
+    int subMenuState = 0; // 0 - first screen, 1 - char selection, 2 - map selection, 3-run done, 4-paused, 5-nothing
     int selectedCommand = 2;
 
     public UI(Game gp) {
@@ -29,7 +29,7 @@ public class UI {
     }
 
     public void draw(Graphics2D g2D) {
-        if (gp.getMenuState() == 1) {
+        if (gp.getMenuState()) {
             if (subMenuState == 0) {
                 drawMainMenuScreen(g2D);
             } else if (subMenuState == 1) {
@@ -41,22 +41,32 @@ public class UI {
             }
         } else {
             g2D.setFont(font_40);
+            g2D.setColor(Color.RED);
+            g2D.drawString("❤ " + gp.player.getHp(), 50, 50);
             g2D.setColor(Color.PINK);
-            g2D.drawString("Speed = " + gp.player.speed, 50, 50);
             if (gp.getPlayState()) {
                 playTime_sec += (double) 1 / 60;
                 if (playTime_sec >= (double) 59) {
                     playTime_min++;
                     playTime_sec = (double) 0;
                 }
+
             } else {
                 g2D.setFont(font_40.deriveFont(Font.PLAIN, 80));
-                g2D.drawString("PAUSED", getCenterX(g2D, "PAUSED"), gp.getScreenHeight() / 2);
+                g2D.drawString("PAUSED", getCenterX(g2D, "PAUSED"), gp.getScreenHeight() / 2 - 80);
+
+                g2D.setFont(font_40.deriveFont(Font.PLAIN, 20));
+                g2D.drawString("Press Esc again to resume", getCenterX(g2D, "Press Esc again to resume"), gp.getScreenHeight() / 2 - 40);
+
                 g2D.setFont(font_40);
+                g2D.drawString("Exit to Menu", getCenterX(g2D, "Exit to Menu"), gp.getScreenHeight() / 2 + 80);
+                g2D.drawString("→", getCenterX(g2D, "Exit to Menu") - 40, gp.getScreenHeight() / 2 + 80);
+                subMenuState = 4;
+
             }
             g2D.drawString("" + playTime_min + dFormat.format(playTime_sec), gp.getScreenWidth() / 2 - 10, 50);
             if (playTime_min == 1) {
-                gp.setMenuState(1);
+                gp.setMenuState(true);
                 gp.setPlayState(false);
                 subMenuState = 3;
             }
@@ -64,6 +74,8 @@ public class UI {
     }
 
     public void drawMainMenuScreen(Graphics2D g2D) {
+        playTime_min = 0;
+        playTime_sec = 0;
         g2D.setColor(Color.DARK_GRAY);
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 96F));
@@ -73,7 +85,7 @@ public class UI {
         g2D.setColor(Color.RED);
         g2D.drawString(text, x, y);
 
-        g2D.setColor(Color.WHITE);
+        g2D.setColor(Color.PINK);
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 60F));
         text = "New Game";
         x = getCenterX(g2D, text);
@@ -145,7 +157,7 @@ public class UI {
 
         g2D.setColor(Color.pink);
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 60F));
-        text = "Scor " + gp.player.speed;
+        text = "Scor " + gp.player.getHp();
         x = getCenterX(g2D, text);
         y += gp.getDefaultTileSize() * 4;
         g2D.drawString(text, x, y);

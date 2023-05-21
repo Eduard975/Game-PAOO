@@ -38,7 +38,7 @@ public class KeyManager implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
         int option = gp.ui.getSelectedCommand();
-        if (gp.getMenuState() == 1) {
+        if (gp.getMenuState()) {
             switch (code) {
                 case KeyEvent.VK_W -> {
                     if (option >= 2)
@@ -60,6 +60,7 @@ public class KeyManager implements KeyListener {
                     int sub_state = gp.ui.getSubMenuState();
                     if (sub_state == 0) {
                         if (option == 2) {
+                            gp.ui.setSelectedCommand(2);
                             gp.ui.setSubMenuState(1);
                         }
 
@@ -73,6 +74,7 @@ public class KeyManager implements KeyListener {
                     }
 
                     if (sub_state == 1) {
+                        gp.ui.setSelectedCommand(2);
                         if (option == 2) {
                             gp.player.setTexture_option(0);
                         }
@@ -85,10 +87,12 @@ public class KeyManager implements KeyListener {
                             gp.player.setTexture_option(2);
                         }
 
+
                         gp.ui.setSubMenuState(2);
                     }
 
                     if (sub_state == 2) {
+                        gp.ui.setSelectedCommand(2);
                         if (option == 2) {
                             gp.tileManager.changeMap(0);
                             gp.player.updateCoords();
@@ -104,7 +108,7 @@ public class KeyManager implements KeyListener {
                             gp.player.updateCoords();
                         }
 
-                        gp.setMenuState(0);
+                        gp.setMenuState(false);
 
                         gp.setPlayState(true);
                     }
@@ -112,6 +116,8 @@ public class KeyManager implements KeyListener {
                     if (sub_state == 3) {
                         gp.ui.setSubMenuState(0);
                     }
+
+
                 }
             }
         } else {
@@ -120,7 +126,18 @@ public class KeyManager implements KeyListener {
                 case KeyEvent.VK_S -> S = true;
                 case KeyEvent.VK_A -> A = true;
                 case KeyEvent.VK_D -> D = true;
-                case KeyEvent.VK_ESCAPE -> gp.setPlayState(!gp.getPlayState());
+                case KeyEvent.VK_SPACE -> {
+                    int sub_state = gp.ui.getSubMenuState();
+                    if (sub_state == 4) {
+                        gp.setMenuState(true);
+                        gp.ui.setSubMenuState(0);
+                    }
+                }
+                case KeyEvent.VK_ESCAPE -> {
+                    gp.setMenuState(false);
+                    gp.ui.setSubMenuState(5);
+                    gp.setPlayState(!gp.getPlayState());
+                }
             }
         }
     }

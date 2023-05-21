@@ -13,6 +13,8 @@ public class Player extends Entity {
     private static Player player = null;
     public int texture_option;
 
+    int hp = 100;
+
     private Player(Game gp, KeyManager keyM) {
         this.gp = gp;
         this.keyM = keyM;
@@ -126,5 +128,13 @@ public class Player extends Entity {
 
         world_x = Game.getDefaultTileSize_s() * gp.getMaxWorldCol() / 2 - 32;
         world_y = Game.getDefaultTileSize_s() * gp.getMaxWorldRow() / 2 - 80;
+    }
+
+    public void setHp(int x) {
+        hp = x;
+    }
+
+    public int getHp() {
+        return hp;
     }
 }

@@ -111,6 +111,10 @@ public class TileManager {
         if (map_option != this.map_option) {
             map = null;
             switch (map_option) {
+                case 0 -> {
+                    path = "src/Resources/Maps/map.txt";
+
+                }
                 case 1 -> {
                     path = "src/Resources/Maps/map.txt";
 
