@@ -108,6 +108,10 @@ public class KeyManager implements KeyListener {
 
                         gp.setPlayState(true);
                     }
+
+                    if (sub_state == 3) {
+                        gp.ui.setSubMenuState(0);
+                    }
                 }
             }
         } else {

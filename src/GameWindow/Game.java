@@ -24,7 +24,7 @@ public class Game extends JPanel implements Runnable {
     //World parameters
     int maxWorldCol = 0; //1500
     int maxWorldRow = 0; //2500
-    int FPS = 600;
+    int FPS = 60000;
 
     boolean playState;
     int menuState;
