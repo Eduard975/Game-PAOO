@@ -28,6 +28,7 @@ public class SuperObject {
                 y - tileSize - 49 < gp.player.world_y + gp.player.y
         ) {
             g2D.drawImage(image, screen_x, screen_y, 48, 48, null);
+
         }
 
     }

@@ -95,7 +95,7 @@ public class TileManager {
             ) {
                 int tileType = map[world_row][world_col];
 
-                g2D.drawImage(tiles[tileType].image, screen_x - 40, screen_y, 48, 48, null);
+                g2D.drawImage(tiles[tileType].image, screen_x, screen_y, 48, 48, null);
             }
 
             world_col++;
@@ -113,11 +113,9 @@ public class TileManager {
             switch (map_option) {
                 case 0 -> {
                     path = "src/Resources/Maps/map2.txt";
-
                 }
                 case 1 -> {
                     path = "src/Resources/Maps/map3.txt";
-
                 }
                 case 2 -> {
                     path = "src/Resources/Maps/map4.txt";
@@ -132,8 +130,8 @@ public class TileManager {
                 int col = fin.nextInt();
 
                 gp.setMaxWorldRow(row);
-
                 gp.setMaxWorldCol(col);
+
                 map = new int[row][col];
                 System.out.println(row + " " + col);
                 fin.close();

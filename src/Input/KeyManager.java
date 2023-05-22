@@ -108,6 +108,8 @@ public class KeyManager implements KeyListener {
                             gp.player.updateCoords();
                         }
 
+                        gp.assets_setter.setEnemy();
+
                         gp.setMenuState(false);
 
                         gp.setPlayState(true);
@@ -117,6 +119,9 @@ public class KeyManager implements KeyListener {
                         gp.ui.setSubMenuState(0);
                     }
 
+                    if (sub_state == 6) {
+                        gp.ui.setSubMenuState(0);
+                    }
 
                 }
             }

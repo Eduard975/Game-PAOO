@@ -8,15 +8,14 @@ import java.awt.*;
 import java.util.Objects;
 
 public class Player extends Entity {
-    Game gp;
     KeyManager keyM;
     private static Player player = null;
     public int texture_option;
 
-    int hp = 100;
+    int kill_count = 0;
 
     private Player(Game gp, KeyManager keyM) {
-        this.gp = gp;
+        super(gp);
         this.keyM = keyM;
 
         setDefaultValues();
@@ -37,11 +36,18 @@ public class Player extends Entity {
         world_x = Game.getDefaultTileSize_s() * gp.getMaxWorldCol() / 2 - 32;
         world_y = Game.getDefaultTileSize_s() * gp.getMaxWorldRow() / 2 - 80;
 
-        hitBox = new Rectangle(25, 22, 20, 54);
+        kill_count = 0;
+
+        hitBox.x = 25;
+        hitBox.y = 22;
+        hitBox.width = 20;
+        hitBox.height = 54;
 
         original_hitbox_x = hitBox.x;
         original_hitbox_y = hitBox.y;
 
+        hp = 100;
+        attack = 20;
         speed = 4;
         direction = "right";
         texture_option = 0;
@@ -51,8 +57,11 @@ public class Player extends Entity {
         is_collided = false;
         gp.colCheck.checkTile(this);
 
+
         int Obj_index = gp.colCheck.checkObject(this, true);
+        int enemy_index = gp.colCheck.checkEntity(this, true);
         pickupObject(Obj_index);
+        touchedEnemy(enemy_index);
 
         if (!is_collided) {
             if (keyM.W) {
@@ -107,6 +116,18 @@ public class Player extends Entity {
         }
     }
 
+    public void touchedEnemy(int index) {
+        if (index != 999) {
+            String enemName = gp.enemies[index].name;
+            if (Objects.equals(enemName, "C")) {
+                gp.enemies[index] = null;
+                kill_count++;
+                hp += -10;
+            }
+        }
+    }
+
+    @Override
     public void draw(Graphics2D g2D) {
         PlayerAssets.Init(texture_option);
 
@@ -115,7 +136,7 @@ public class Player extends Entity {
             case "right" -> texture = PlayerAssets.heroRight;
         }
 
-        g2D.drawImage(texture, x - 40, y, 64, 98, null);
+        g2D.drawImage(texture, x, y, 64, 98, null);
     }
 
     public void setTexture_option(int texture_option) {
@@ -130,8 +151,8 @@ public class Player extends Entity {
         world_y = Game.getDefaultTileSize_s() * gp.getMaxWorldRow() / 2 - 80;
     }
 
-    public void setHp(int x) {
-        hp = x;
+    public int getKD() {
+        return kill_count;
     }
 
     public int getHp() {

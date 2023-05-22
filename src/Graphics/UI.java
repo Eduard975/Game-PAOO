@@ -14,9 +14,10 @@ public class UI {
     double playTime_sec;
     int playTime_min;
 
+    int Score;
     BufferedImage[] maps;
 
-    int subMenuState = 0; // 0 - first screen, 1 - char selection, 2 - map selection, 3-run done, 4-paused, 5-nothing
+    int subMenuState = 0; // 0 - first screen, 1 - char selection, 2 - map selection, 3-run done, 4-paused, 5-nothing, 6-lose screen
     int selectedCommand = 2;
 
     public UI(Game gp) {
@@ -38,12 +39,28 @@ public class UI {
                 drawSubMenu2(g2D);
             } else if (subMenuState == 3) {
                 drawEndScreen(g2D);
+            } else if (subMenuState == 6) {
+                drawLoserEndScreen(g2D);
             }
         } else {
             g2D.setFont(font_40);
+
             g2D.setColor(Color.RED);
-            g2D.drawString("❤ " + gp.player.getHp(), 50, 50);
+            g2D.drawString("❤ " + gp.player.hp, 50, 50);
+
+            g2D.setColor(Color.WHITE);
+            g2D.drawString("\uD83D\uDC80 " + gp.player.getKD(), 1050, 50);
+            g2D.drawString("⚔", 55, 90);
+
+            g2D.setFont(font_40.deriveFont(Font.PLAIN, 40));
+            g2D.drawString("    " + gp.player.attack, 60, 90);
+            g2D.setFont(font_40);
+
+            g2D.setColor(Color.YELLOW);
+            g2D.drawString("\uD83D\uDC5F " + gp.player.speed, 50, 130);
+
             g2D.setColor(Color.PINK);
+
             if (gp.getPlayState()) {
                 playTime_sec += (double) 1 / 60;
                 if (playTime_sec >= (double) 59) {
@@ -64,6 +81,7 @@ public class UI {
                 subMenuState = 4;
 
             }
+
             String text = playTime_min + dFormat.format(playTime_sec);
             g2D.drawString(text, getCenterX(g2D, text), 50);
             if (playTime_min == 1) {
@@ -71,14 +89,25 @@ public class UI {
                 gp.setPlayState(false);
                 subMenuState = 3;
             }
+
+            if (gp.player.getHp() <= 0) {
+                gp.setMenuState(true);
+                gp.setPlayState(false);
+                subMenuState = 6;
+            }
         }
     }
 
     public void drawMainMenuScreen(Graphics2D g2D) {
         playTime_min = 0;
         playTime_sec = 0;
+        gp.player.setDefaultValues();
+        gp.assets_setter.setObject();
+        // gp.assets_setter.setEnemy();
+
         g2D.setColor(Color.DARK_GRAY);
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
+
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 96F));
         String text = "Mesterul Grigore";
         int x = getCenterX(g2D, text);
@@ -88,6 +117,7 @@ public class UI {
 
         g2D.setColor(Color.PINK);
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 60F));
+
         text = "New Game";
         x = getCenterX(g2D, text);
         y += gp.getDefaultTileSize() * 4;
@@ -150,6 +180,8 @@ public class UI {
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 96F));
 
+        Score = (int) (((gp.player.hp + gp.player.getKD() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
+
         String text = "Felicitari! Ai supravietuit";
         int x = getCenterX(g2D, text);
         int y = gp.getDefaultTileSize() * 3;
@@ -158,7 +190,7 @@ public class UI {
 
         g2D.setColor(Color.pink);
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 60F));
-        text = "Scor " + gp.player.getHp();
+        text = "Scor " + Score;
         x = getCenterX(g2D, text);
         y += gp.getDefaultTileSize() * 4;
         g2D.drawString(text, x, y);
@@ -169,7 +201,34 @@ public class UI {
         y += gp.getDefaultTileSize() * 4;
         g2D.drawString(text, x, y);
         g2D.drawString("→", (int) (x - gp.getDefaultTileSize() * 1.5), y);
+    }
 
+    public void drawLoserEndScreen(Graphics2D g2D) {
+        g2D.setColor(Color.DARK_GRAY);
+        g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
+        g2D.setFont(font_40.deriveFont(Font.PLAIN, 86F));
+
+        Score = (int) (((gp.player.hp + gp.player.getKD() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
+
+        String text = "Din pacate nu ai supravietuit";
+        int x = getCenterX(g2D, text);
+        int y = gp.getDefaultTileSize() * 3;
+        g2D.setColor(Color.RED);
+        g2D.drawString(text, x, y);
+
+        g2D.setColor(Color.pink);
+        g2D.setFont(font_40.deriveFont(Font.PLAIN, 60F));
+        text = "Scor " + Score;
+        x = getCenterX(g2D, text);
+        y += gp.getDefaultTileSize() * 4;
+        g2D.drawString(text, x, y);
+
+        g2D.setFont(font_40.deriveFont(Font.PLAIN, 40F));
+        text = "Return to Menu";
+        x = getCenterX(g2D, text);
+        y += gp.getDefaultTileSize() * 4;
+        g2D.drawString(text, x, y);
+        g2D.drawString("→", (int) (x - gp.getDefaultTileSize() * 1.5), y);
     }
 
     public void displayCharacters(Graphics2D g2D) {

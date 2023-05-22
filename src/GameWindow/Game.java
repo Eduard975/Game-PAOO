@@ -1,6 +1,7 @@
 package GameWindow;
 
 import Entity.CollisionCheck;
+import Entity.Entity;
 import Entity.Player;
 import Graphics.AssetsSetter;
 import Graphics.UI;
@@ -35,6 +36,8 @@ public class Game extends JPanel implements Runnable {
     public TileManager tileManager = new TileManager(this);
     public Player player = Player.getInstance(this, KeyMan);
     public AssetsSetter assets_setter = new AssetsSetter(this);
+
+    public Entity[] enemies = new Entity[5];
     public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
 
@@ -50,6 +53,7 @@ public class Game extends JPanel implements Runnable {
 
     public void setupGame() {
         assets_setter.setObject();
+        assets_setter.setEnemy();
         playState = false;
         menuState = true;
     }
@@ -86,6 +90,16 @@ public class Game extends JPanel implements Runnable {
     public void update() {
         if (playState) {
             player.update();
+            for (int i = 0; i < enemies.length; i++) {
+                if (enemies[i] != null) {
+                    enemies[i].update();
+                    //System.out.println("Ajutor??");
+                }
+                if (enemies[i] == null) {
+                    assets_setter.newEnemy(i);
+                    System.out.println("mort");
+                }
+            }
         }
     }
 
@@ -102,6 +116,14 @@ public class Game extends JPanel implements Runnable {
             for (SuperObject superObject : obj) {
                 if (superObject != null) {
                     superObject.draw(g2D, this);
+
+                }
+            }
+
+            for (Entity enemy : enemies) {
+                if (enemy != null) {
+                    enemy.draw(g2D);
+                    //System.out.println("Ajutor??");
                 }
             }
 

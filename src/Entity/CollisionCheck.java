@@ -45,8 +45,8 @@ public class CollisionCheck {
     }
 
     private void tileNum_left_right(Entity entity, int entity_col, int entityTop_row, int entityBottom_row) {
-        int tileNum1 = gp.tileManager.map[entityTop_row][entity_col];
-        int tileNum2 = gp.tileManager.map[entityTop_row][entity_col + 1];
+        int tileNum1 = gp.tileManager.map[entityTop_row + 1][entity_col];
+        int tileNum2 = gp.tileManager.map[entityTop_row][entity_col];
         int tileNum3 = gp.tileManager.map[entityBottom_row][entity_col];
         if (gp.tileManager.getCollision(tileNum1) || gp.tileManager.getCollision(tileNum2) || gp.tileManager.getCollision(tileNum3)) {
             entity.is_collided = true;
@@ -123,4 +123,46 @@ public class CollisionCheck {
         return index;
     }
 
+    public int checkEntity(Entity entity, boolean is_player) {
+        int index = 999;
+
+        for (int i = 0; i < gp.enemies.length; i++) {
+            if (gp.enemies[i] != null) {
+                //Pozitia hitboxului caracterului
+                entity.hitBox.x = entity.world_x + entity.hitBox.x;
+                entity.hitBox.y = entity.world_y + entity.hitBox.y;
+
+                //pozitia hitboxului obiectului
+                gp.enemies[i].hitBox.x = gp.enemies[i].x + gp.enemies[i].hitBox.x;
+                gp.enemies[i].hitBox.y = gp.enemies[i].y + gp.enemies[i].hitBox.y;
+
+                switch (entity.direction) {
+                    case "up" -> {
+                        entity.hitBox.y += entity.speed;
+                    }
+                    case "down" -> {
+                        entity.hitBox.y -= entity.speed;
+                    }
+                    case "left" -> {
+                        entity.hitBox.x -= entity.speed;
+                    }
+                    case "right" -> {
+                        entity.hitBox.x += entity.speed;
+                    }
+                }
+                if (entity.hitBox.intersects(gp.enemies[i].hitBox)) {
+                    if (is_player) {
+                        index = i;
+                    }
+                }
+
+                entity.hitBox.x = entity.original_hitbox_x;
+                entity.hitBox.y = entity.original_hitbox_y;
+
+                gp.enemies[i].hitBox.x = gp.enemies[i].original_hitbox_x;
+                gp.enemies[i].hitBox.y = gp.enemies[i].original_hitbox_y;
+            }
+        }
+        return index;
+    }
 }
