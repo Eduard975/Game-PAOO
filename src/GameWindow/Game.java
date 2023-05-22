@@ -11,6 +11,7 @@ import Objects.SuperObject;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class Game extends JPanel implements Runnable {
     static final int default_TileSize = 48;
@@ -26,10 +27,12 @@ public class Game extends JPanel implements Runnable {
     int maxWorldCol = 0; //1500
     int maxWorldRow = 0; //2500
     int FPS = 60;
+    int CD = 120;
 
     boolean playState;
     boolean menuState;
 
+    int projectile_counter = 0;
     KeyManager KeyMan = new KeyManager(this);
     Thread gameThread;
     public UI ui = new UI(this);
@@ -38,6 +41,8 @@ public class Game extends JPanel implements Runnable {
     public AssetsSetter assets_setter = new AssetsSetter(this);
 
     public Entity[] enemies = new Entity[5];
+
+    public ArrayList<Entity> gun = new ArrayList<Entity>();
     public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
 
@@ -53,7 +58,6 @@ public class Game extends JPanel implements Runnable {
 
     public void setupGame() {
         assets_setter.setObject();
-        assets_setter.setEnemy();
         playState = false;
         menuState = true;
     }
@@ -97,7 +101,6 @@ public class Game extends JPanel implements Runnable {
                 }
                 if (enemies[i] == null) {
                     assets_setter.newEnemy(i);
-                    System.out.println("mort");
                 }
             }
         }
@@ -123,7 +126,6 @@ public class Game extends JPanel implements Runnable {
             for (Entity enemy : enemies) {
                 if (enemy != null) {
                     enemy.draw(g2D);
-                    //System.out.println("Ajutor??");
                 }
             }
 

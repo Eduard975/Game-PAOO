@@ -91,6 +91,7 @@ public class UI {
             }
 
             if (gp.player.getHp() <= 0) {
+                gp.player.setHp(0);
                 gp.setMenuState(true);
                 gp.setPlayState(false);
                 subMenuState = 6;

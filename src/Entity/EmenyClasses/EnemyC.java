@@ -1,14 +1,16 @@
-package Entity;
+package Entity.EmenyClasses;
 
+import Entity.Entity;
 import GameWindow.Game;
 import Graphics.EnemyAssets;
 
 public class EnemyC extends Entity {
-    protected EnemyC(Game gp) {
+    public EnemyC(Game gp) {
         super(gp);
         name = "C";
-        speed = 2;
+        speed = 4;
         hp = 40;
+        attack = 10;
 
         hitBox.x = 20;
         hitBox.y = 20;

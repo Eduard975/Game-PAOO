@@ -12,6 +12,7 @@ public class Player extends Entity {
     private static Player player = null;
     public int texture_option;
 
+
     int kill_count = 0;
 
     private Player(Game gp, KeyManager keyM) {
@@ -48,16 +49,16 @@ public class Player extends Entity {
 
         hp = 100;
         attack = 20;
-        speed = 4;
+        speed = 8;
         direction = "right";
         texture_option = 0;
+
     }
 
     public void update() {
         is_collided = false;
         gp.colCheck.checkTile(this);
-
-
+        
         int Obj_index = gp.colCheck.checkObject(this, true);
         int enemy_index = gp.colCheck.checkEntity(this, true);
         pickupObject(Obj_index);
@@ -118,12 +119,9 @@ public class Player extends Entity {
 
     public void touchedEnemy(int index) {
         if (index != 999) {
-            String enemName = gp.enemies[index].name;
-            if (Objects.equals(enemName, "C")) {
-                gp.enemies[index] = null;
-                kill_count++;
-                hp += -10;
-            }
+            hp -= gp.enemies[index].attack;
+            gp.enemies[index] = null;
+            kill_count++;
         }
     }
 
@@ -157,5 +155,9 @@ public class Player extends Entity {
 
     public int getHp() {
         return hp;
+    }
+
+    public void setHp(int x) {
+        hp = x;
     }
 }

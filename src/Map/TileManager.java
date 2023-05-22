@@ -149,4 +149,7 @@ public class TileManager {
         return tiles[tileNum].collision;
     }
 
+    public int getMap_option() {
+        return map_option;
+    }
 }
