@@ -3,6 +3,7 @@ package GameWindow;
 import Entity.CollisionCheck;
 import Entity.Entity;
 import Entity.Player;
+import Entity.Projectile;
 import Graphics.AssetsSetter;
 import Graphics.UI;
 import Input.KeyManager;
@@ -27,12 +28,9 @@ public class Game extends JPanel implements Runnable {
     int maxWorldCol = 0; //1500
     int maxWorldRow = 0; //2500
     int FPS = 60;
-    int CD = 120;
-
     boolean playState;
     boolean menuState;
 
-    int projectile_counter = 0;
     KeyManager KeyMan = new KeyManager(this);
     Thread gameThread;
     public UI ui = new UI(this);
@@ -42,7 +40,7 @@ public class Game extends JPanel implements Runnable {
 
     public Entity[] enemies = new Entity[5];
 
-    public ArrayList<Entity> gun = new ArrayList<Entity>();
+    public ArrayList<Projectile> gun = new ArrayList<Projectile>();
     public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
 
@@ -57,7 +55,6 @@ public class Game extends JPanel implements Runnable {
     }
 
     public void setupGame() {
-        assets_setter.setObject();
         playState = false;
         menuState = true;
     }
@@ -103,6 +100,19 @@ public class Game extends JPanel implements Runnable {
                     assets_setter.newEnemy(i);
                 }
             }
+
+            System.out.println(gun.size());
+
+            for (int i = 0; i < gun.size(); i++) {
+                if (gun.get(i) != null && gun.get(i).hp > 0) {
+                    gun.get(i).update();
+                    //System.out.println("Ajutor??");
+                }
+                if (gun.get(i).hp == 0) {
+                    gun.remove(i);
+                }
+            }
+
         }
     }
 
@@ -126,6 +136,13 @@ public class Game extends JPanel implements Runnable {
             for (Entity enemy : enemies) {
                 if (enemy != null) {
                     enemy.draw(g2D);
+                }
+            }
+
+            for (Entity entity : gun) {
+                if (entity != null) {
+                    entity.draw(g2D, 32, 32);
+                    //System.out.println("Ajutor??");
                 }
             }
 

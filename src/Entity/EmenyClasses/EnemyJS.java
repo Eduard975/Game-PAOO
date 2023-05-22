@@ -9,7 +9,7 @@ public class EnemyJS extends Entity {
         super(gp);
         name = "JS";
         speed = 5;
-        hp = 60;
+        hp = 30;
         attack = 6;
 
         hitBox.x = 20;

@@ -9,7 +9,7 @@ public class EnemyPY extends Entity {
         super(gp);
         name = "PY";
         speed = 4;
-        hp = 70;
+        hp = 60;
         attack = 15;
 
         hitBox.x = 20;

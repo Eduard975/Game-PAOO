@@ -54,6 +54,23 @@ public class Entity {
             g2D.drawImage(texture, screen_x, screen_y, 64, 64, null);
 
         }
+    }
 
+    public void draw(Graphics2D g2D, int w, int h) {
+        int screen_x = x + gp.player.x - gp.player.world_x;
+        int screen_y = y + gp.player.y - gp.player.world_y;
+        int tileSize = Game.getDefaultTileSize_s();
+        if (x + tileSize > gp.player.world_x - gp.player.x &&
+                x - tileSize - 32 < gp.player.world_x + gp.player.x &&
+                y + tileSize > gp.player.world_y - gp.player.y &&
+                y - tileSize - 32 < gp.player.world_y + gp.player.y
+        ) {
+            g2D.drawImage(texture, screen_x, screen_y, w, h, null);
+
+        }
+    }
+
+    public void damage(int x) {
+        hp -= x;
     }
 }

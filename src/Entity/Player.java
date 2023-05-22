@@ -12,6 +12,10 @@ public class Player extends Entity {
     private static Player player = null;
     public int texture_option;
 
+    public Projectile Bullet;
+
+    int CD = 60;
+
 
     int kill_count = 0;
 
@@ -49,7 +53,10 @@ public class Player extends Entity {
 
         hp = 100;
         attack = 20;
-        speed = 8;
+
+        Bullet = new projectile_VIM(gp);
+
+        speed = 6;
         direction = "right";
         texture_option = 0;
 
@@ -58,11 +65,22 @@ public class Player extends Entity {
     public void update() {
         is_collided = false;
         gp.colCheck.checkTile(this);
-        
+
         int Obj_index = gp.colCheck.checkObject(this, true);
         int enemy_index = gp.colCheck.checkEntity(this, true);
         pickupObject(Obj_index);
         touchedEnemy(enemy_index);
+
+        if (CD == 60) {
+            Bullet.set(player.direction, player.world_x, player.world_y + 20, player.attack);
+            CD = 0;
+
+            Bullet.hp = 3 * 60;
+            System.out.println("Shoot?");
+            gp.gun.add(Bullet);
+        }
+
+        CD++;
 
         if (!is_collided) {
             if (keyM.W) {

@@ -103,7 +103,7 @@ public class UI {
         playTime_min = 0;
         playTime_sec = 0;
         gp.player.setDefaultValues();
-        gp.assets_setter.setObject();
+        // gp.assets_setter.setObject();
         // gp.assets_setter.setEnemy();
 
         g2D.setColor(Color.DARK_GRAY);
@@ -209,7 +209,7 @@ public class UI {
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 86F));
 
-        Score = (int) (((gp.player.hp + gp.player.getKD() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
+        Score = (int) (((gp.player.hp * gp.player.getKD() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
 
         String text = "Din pacate nu ai supravietuit";
         int x = getCenterX(g2D, text);

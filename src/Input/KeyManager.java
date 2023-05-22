@@ -109,6 +109,7 @@ public class KeyManager implements KeyListener {
                         }
 
                         gp.assets_setter.setEnemy();
+                        gp.assets_setter.setObject();
 
                         gp.setMenuState(false);
 

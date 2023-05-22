@@ -12,7 +12,7 @@ public class ItemAssets {
 
         keyboard = sheet.crop(0, 0);
 
-        vim = sheet.crop(0, 0, 32, 32);
+        vim = sheet2.crop(0, 0, 32, 32);
 
     }
 }

@@ -9,7 +9,7 @@ public class EnemyCpp extends Entity {
         super(gp);
         name = "Cpp";
         speed = 2;
-        hp = 50;
+        hp = 20;
         attack = 10;
 
         hitBox.x = 20;
