@@ -53,10 +53,8 @@ public class AssetsSetter {
         gp.enemies[i].y = (gp.player.world_y + 48 * (i * 10 + 10) * next());
         gp.enemies[i].x = (gp.player.world_x + 48 * (i * 10 + 10) * next());
     }
-
-
+    
     public static int getNext() {
         return next();
     }
-
 }
