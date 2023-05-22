@@ -4,7 +4,7 @@ import GameWindow.Game;
 import Graphics.EnemyAssets;
 
 public class EnemyC extends Entity {
-    public EnemyC(Game gp) {
+    protected EnemyC(Game gp) {
         super(gp);
         name = "C";
         speed = 2;
