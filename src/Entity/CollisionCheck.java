@@ -123,18 +123,18 @@ public class CollisionCheck {
         return index;
     }
 
-    public int checkEntity(Entity entity, boolean is_player) {
+    public int checkEntity(Entity entity, Entity[] target) {
         int index = 999;
 
-        for (int i = 0; i < gp.enemies.length; i++) {
-            if (gp.enemies[i] != null) {
-                //Pozitia hitboxului caracterului
+        for (int i = 0; i < target.length; i++) {
+            if (target[i] != null) {
+                //Pozitia hitboxului enitatii
                 entity.hitBox.x = entity.world_x + entity.hitBox.x;
                 entity.hitBox.y = entity.world_y + entity.hitBox.y;
 
-                //pozitia hitboxului obiectului
-                gp.enemies[i].hitBox.x = gp.enemies[i].x + gp.enemies[i].hitBox.x;
-                gp.enemies[i].hitBox.y = gp.enemies[i].y + gp.enemies[i].hitBox.y;
+                //pozitia hitboxului tintei
+                target[i].hitBox.x = target[i].x + target[i].hitBox.x;
+                target[i].hitBox.y = target[i].y + target[i].hitBox.y;
 
                 switch (entity.direction) {
                     case "up" -> {
@@ -150,19 +150,18 @@ public class CollisionCheck {
                         entity.hitBox.x += entity.speed;
                     }
                 }
-                if (entity.hitBox.intersects(gp.enemies[i].hitBox)) {
-                    if (is_player) {
-                        index = i;
-                    }
+                if (entity.hitBox.intersects(target[i].hitBox)) {
+                    index = i;
                 }
 
                 entity.hitBox.x = entity.original_hitbox_x;
                 entity.hitBox.y = entity.original_hitbox_y;
 
-                gp.enemies[i].hitBox.x = gp.enemies[i].original_hitbox_x;
-                gp.enemies[i].hitBox.y = gp.enemies[i].original_hitbox_y;
+                target[i].hitBox.x = target[i].original_hitbox_x;
+                target[i].hitBox.y = target[i].original_hitbox_y;
             }
         }
         return index;
     }
+
 }

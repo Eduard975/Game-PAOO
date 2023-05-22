@@ -49,7 +49,7 @@ public class UI {
             g2D.drawString("❤ " + gp.player.hp, 50, 50);
 
             g2D.setColor(Color.WHITE);
-            g2D.drawString("\uD83D\uDC80 " + gp.player.getKD(), 1050, 50);
+            g2D.drawString("\uD83D\uDC80 " + gp.player.getKillC(), 1050, 50);
             g2D.drawString("⚔", 55, 90);
 
             g2D.setFont(font_40.deriveFont(Font.PLAIN, 40));
@@ -84,7 +84,7 @@ public class UI {
 
             String text = playTime_min + dFormat.format(playTime_sec);
             g2D.drawString(text, getCenterX(g2D, text), 50);
-            if (playTime_min == 1) {
+            if (playTime_min == 5) {
                 gp.setMenuState(true);
                 gp.setPlayState(false);
                 subMenuState = 3;
@@ -103,8 +103,6 @@ public class UI {
         playTime_min = 0;
         playTime_sec = 0;
         gp.player.setDefaultValues();
-        // gp.assets_setter.setObject();
-        // gp.assets_setter.setEnemy();
 
         g2D.setColor(Color.DARK_GRAY);
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
@@ -181,7 +179,7 @@ public class UI {
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 96F));
 
-        Score = (int) (((gp.player.hp + gp.player.getKD() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
+        Score = (int) (((gp.player.hp + gp.player.getKillC() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
 
         String text = "Felicitari! Ai supravietuit";
         int x = getCenterX(g2D, text);
@@ -209,7 +207,7 @@ public class UI {
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 86F));
 
-        Score = (int) (((gp.player.hp * gp.player.getKD() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
+        Score = (int) (((gp.player.hp * gp.player.getKillC() + playTime_sec + (playTime_min * 60)) * 100) / Math.PI);
 
         String text = "Din pacate nu ai supravietuit";
         int x = getCenterX(g2D, text);

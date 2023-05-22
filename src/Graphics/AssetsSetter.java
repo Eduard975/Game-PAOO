@@ -35,7 +35,6 @@ public class AssetsSetter {
     }
 
     public void setEnemy() {
-        System.out.println("Incepe nebunia");
         int map_id = gp.tileManager.getMap_option();
         for (int i = 0; i < gp.enemies.length; i++) {
             if (gp.enemies[i] == null) {
@@ -44,9 +43,6 @@ public class AssetsSetter {
             gp.enemies[i].y = (gp.player.world_y + 48 * (i * 10 + 10) * next());
             gp.enemies[i].x = (gp.player.world_x + 48 * (i * 10 + 10) * next());
         }
-
-        System.out.println("Se termina nebunia");
-
     }
 
     public void newEnemy(int i) {

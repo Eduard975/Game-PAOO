@@ -18,6 +18,8 @@ public class Entity {
     public boolean is_collided = false;
     public BufferedImage texture;
     public String direction;
+    public boolean used = false;
+
 
     public Entity(Game gp) {
         this.gp = gp;

@@ -3,7 +3,6 @@ package GameWindow;
 import Entity.CollisionCheck;
 import Entity.Entity;
 import Entity.Player;
-import Entity.Projectile;
 import Graphics.AssetsSetter;
 import Graphics.UI;
 import Input.KeyManager;
@@ -40,7 +39,7 @@ public class Game extends JPanel implements Runnable {
 
     public Entity[] enemies = new Entity[5];
 
-    public ArrayList<Projectile> gun = new ArrayList<Projectile>();
+    public ArrayList<Entity> gun = new ArrayList<Entity>();
     public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
 
@@ -94,25 +93,22 @@ public class Game extends JPanel implements Runnable {
             for (int i = 0; i < enemies.length; i++) {
                 if (enemies[i] != null) {
                     enemies[i].update();
-                    //System.out.println("Ajutor??");
                 }
+
                 if (enemies[i] == null) {
                     assets_setter.newEnemy(i);
                 }
             }
-
-            System.out.println(gun.size());
-
+            int tempindx = -99;
             for (int i = 0; i < gun.size(); i++) {
-                if (gun.get(i) != null && gun.get(i).hp > 0) {
-                    gun.get(i).update();
-                    //System.out.println("Ajutor??");
-                }
-                if (gun.get(i).hp == 0) {
-                    gun.remove(i);
+                gun.get(i).update();
+
+                if (gun.get(i).used) {
+                    tempindx = i;
                 }
             }
-
+            if (tempindx != -99)
+                gun.remove(tempindx);
         }
     }
 
@@ -139,10 +135,9 @@ public class Game extends JPanel implements Runnable {
                 }
             }
 
-            for (Entity entity : gun) {
-                if (entity != null) {
-                    entity.draw(g2D, 32, 32);
-                    //System.out.println("Ajutor??");
+            for (Entity bullet : gun) {
+                if (!bullet.used) {
+                    bullet.draw(g2D, 32, 32);
                 }
             }
 
@@ -150,7 +145,6 @@ public class Game extends JPanel implements Runnable {
 
             ui.draw(g2D);
         }
-
 
         g2D.dispose();
     }

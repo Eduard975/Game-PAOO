@@ -12,7 +12,6 @@ public class Player extends Entity {
     private static Player player = null;
     public int texture_option;
 
-    public Projectile Bullet;
 
     int CD = 60;
 
@@ -54,8 +53,6 @@ public class Player extends Entity {
         hp = 100;
         attack = 20;
 
-        Bullet = new projectile_VIM(gp);
-
         speed = 6;
         direction = "right";
         texture_option = 0;
@@ -67,17 +64,15 @@ public class Player extends Entity {
         gp.colCheck.checkTile(this);
 
         int Obj_index = gp.colCheck.checkObject(this, true);
-        int enemy_index = gp.colCheck.checkEntity(this, true);
+        int enemy_index = gp.colCheck.checkEntity(this, gp.enemies);
         pickupObject(Obj_index);
         touchedEnemy(enemy_index);
 
-        if (CD == 60) {
-            Bullet.set(player.direction, player.world_x, player.world_y + 20, player.attack);
-            CD = 0;
-
-            Bullet.hp = 3 * 60;
-            System.out.println("Shoot?");
+        if (CD == 120) {
+            Projectile Bullet = new projectile_VIM(gp);
+            Bullet.set(player.direction, player.world_x + 30, player.world_y + 20, player.attack, 5 * 60);
             gp.gun.add(Bullet);
+            CD = 0;
         }
 
         CD++;
@@ -127,10 +122,7 @@ public class Player extends Entity {
             String objName = gp.obj[index].name;
             if (Objects.equals(objName, "keyBoard")) {
                 gp.obj[index] = null;
-                System.out.println("Old speed: " + speed);
                 speed += 2;
-                System.out.println("New speed: " + speed);
-                System.out.println("------------------------------------");
             }
         }
     }
@@ -167,7 +159,7 @@ public class Player extends Entity {
         world_y = Game.getDefaultTileSize_s() * gp.getMaxWorldRow() / 2 - 80;
     }
 
-    public int getKD() {
+    public int getKillC() {
         return kill_count;
     }
 
@@ -177,5 +169,9 @@ public class Player extends Entity {
 
     public void setHp(int x) {
         hp = x;
+    }
+
+    public void incKillC() {
+        kill_count++;
     }
 }

@@ -8,23 +8,31 @@ public class Projectile extends Entity {
         super(gp);
     }
 
-    public void set(String direction, int x, int y, int atk) {
+    public void set(String direction, int x, int y, int atk, int hp) {
         this.direction = direction;
         this.x = x;
         this.y = y;
+        this.hitBox.x = x;
+        this.hitBox.y = y;
+        this.original_hitbox_x = x;
+        this.original_hitbox_y = y;
         this.attack = atk;
+        this.hp = hp;
 
     }
 
     public void update() {
-        int enem_indx = gp.colCheck.checkEntity(this, false);
-        if (enem_indx != 999) {
-            gp.enemies[enem_indx].damage(attack);
-            if (gp.enemies[enem_indx].hp <= 0) {
-                gp.enemies[enem_indx] = null;
+        int enemyindex = gp.colCheck.checkEntity(this, gp.enemies);
+        if (enemyindex != 999) {
+            gp.enemies[enemyindex].damage(this.attack);
+            if (gp.enemies[enemyindex].hp <= 0) {
+                gp.enemies[enemyindex] = null;
+                used = true;
+                gp.player.incKillC();
             }
-            hp = 0;
-        } else {
+        }
+
+        if (!used) {
             switch (direction) {
                 case "up" -> y -= speed;
                 case "down" -> y += speed;
@@ -34,5 +42,4 @@ public class Projectile extends Entity {
             hp--;
         }
     }
-
 }
