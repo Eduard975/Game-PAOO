@@ -103,6 +103,8 @@ public class UI {
         playTime_min = 0;
         playTime_sec = 0;
         gp.player.setDefaultValues();
+        gp.gun.clear();
+
 
         g2D.setColor(Color.DARK_GRAY);
         g2D.fillRect(0, 0, gp.getScreenWidth(), gp.getScreenHeight());

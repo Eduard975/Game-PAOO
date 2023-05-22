@@ -34,10 +34,10 @@ public class Projectile extends Entity {
 
         if (!used) {
             switch (direction) {
-                case "up" -> y -= speed;
-                case "down" -> y += speed;
-                case "left" -> x -= speed;
-                case "right" -> x += speed;
+                case "up" -> y += speed;
+                case "down" -> y -= speed;
+                case "left" -> x += speed;
+                case "right" -> x -= speed;
             }
             hp--;
         }

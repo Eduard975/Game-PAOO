@@ -12,8 +12,6 @@ public class EnemyC extends Entity {
         hp = 10;
         attack = 10;
 
-        hitBox.x = 20;
-        hitBox.y = 20;
         hitBox.width = 64;
         hitBox.height = 64;
 

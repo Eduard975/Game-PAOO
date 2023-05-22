@@ -43,9 +43,7 @@ public class PlayerAssets {
                 return sheet.crop(2, 0, player_w, player_h);
 
             }
-
         }
-
         return null;
     }
 }

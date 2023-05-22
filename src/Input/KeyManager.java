@@ -62,6 +62,11 @@ public class KeyManager implements KeyListener {
                         if (option == 2) {
                             gp.ui.setSelectedCommand(2);
                             gp.ui.setSubMenuState(1);
+                            for (int i = 0; i < gp.enemies.length; i++) {
+                                if (gp.enemies[i] != null) {
+                                    gp.enemies[i] = null;
+                                }
+                            }
                         }
 
                         if (option == 1) {
@@ -107,6 +112,7 @@ public class KeyManager implements KeyListener {
                             gp.tileManager.changeMap(2);
                             gp.player.updateCoords();
                         }
+
 
                         gp.assets_setter.setEnemy();
                         gp.assets_setter.setObject();

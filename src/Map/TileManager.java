@@ -12,7 +12,7 @@ public class TileManager {
     Game gp;
     Tile[] tiles;
     public int[][] map;
-    String path = "src/Resources/Maps/map.txt";
+    String path = "src/Resources/Maps/map2.txt";
     int map_option = 0;
 
     public TileManager(Game gp) {

@@ -6,7 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/EmenyClasses/EnemyC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/EmenyClasses/EnemyC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/AssetsSetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/AssetsSetter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Input/KeyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Input/KeyManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/EmenyClasses/EnemyC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/EmenyClasses/EnemyC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graphics/AssetsSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/AssetsSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/PlayerAssets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/PlayerAssets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Input/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +125,7 @@
       <workItem from="1684618557378" duration="555000" />
       <workItem from="1684662989079" duration="22148000" />
       <workItem from="1684698259926" duration="2617000" />
-      <workItem from="1684735888665" duration="42292000" />
+      <workItem from="1684735888665" duration="43630000" />
     </task>
     <servers />
   </component>

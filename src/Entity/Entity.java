@@ -68,7 +68,6 @@ public class Entity {
                 y - tileSize - 32 < gp.player.world_y + gp.player.y
         ) {
             g2D.drawImage(texture, screen_x, screen_y, w, h, null);
-
         }
     }
 
