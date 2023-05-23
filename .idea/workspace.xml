@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_7_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PAOO_Grigore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PAOO_Grigore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/DataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/DataBase/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/DB/DataBase" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/DB/DataBase" beforeDir="false" />
-    </list>
+    <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +118,7 @@
       <workItem from="1684735888665" duration="43630000" />
       <workItem from="1684785822228" duration="2210000" />
       <workItem from="1684818602130" duration="2314000" />
-      <workItem from="1684821386466" duration="6688000" />
+      <workItem from="1684821386466" duration="6736000" />
     </task>
     <servers />
   </component>
