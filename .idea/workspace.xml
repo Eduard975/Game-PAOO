@@ -5,29 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
-      <change afterPath="$PROJECT_DIR$/src/DataBase/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_7_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PAOO_Grigore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PAOO_Grigore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/DataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/DataBase/DataBase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/projectile_VIM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/projectile_VIM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphics/ItemAssets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/ItemAssets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphics/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/DB/DataBase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map1_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map1_preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map2_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map2_preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map3_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map3_preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Textures/sprite_sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Textures/sprite_sheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/DB/DataBase" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,17 +57,22 @@
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/home/rino/Documents/PAOO/PAOO_Grigore",
+    "last_opened_file_path": "/home/rino/Documents/PAOO/PAOO_Grigore/sqlite-jdbc-3.7.2.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -137,7 +129,7 @@
       <workItem from="1684735888665" duration="43630000" />
       <workItem from="1684785822228" duration="2210000" />
       <workItem from="1684818602130" duration="2314000" />
-      <workItem from="1684821386466" duration="3708000" />
+      <workItem from="1684821386466" duration="6688000" />
     </task>
     <servers />
   </component>

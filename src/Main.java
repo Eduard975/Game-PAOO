@@ -8,10 +8,7 @@ public class Main {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setTitle("Mesterul Grigore");
-
-        //DataBase x = new DataBase();
-        //x.killCon();
-
+        
         Game Jocul = new Game();
         window.add(Jocul);
 

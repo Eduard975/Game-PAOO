@@ -18,12 +18,14 @@ public class DataBase {
     public void EstablishCon() {
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:DataBase.db");
-            p = c.prepareStatement("select * from HighScores");
+            c = DriverManager.getConnection("jdbc:sqlite:hs.db");
             stm = c.createStatement();
-            rs = p.executeQuery();
-            stm.executeUpdate("insert into HighScores(HighScores, id)"
-                    + "VALUES (" + 10 + ',' + 1 + ")");
+            stm.executeUpdate("create table if not exists HighScores(" +
+                    "scores integer," +
+                    "place integer);");
+            stm.executeUpdate("insert into HighScores(scores, place)"
+                    + "VALUES (" + 10 + ',' + 1 + ");");
+            rs = stm.executeQuery("select * from HighScores");
 
 
         } catch (SQLException | ClassNotFoundException e) {
