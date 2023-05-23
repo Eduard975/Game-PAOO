@@ -5,21 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
+      <change afterPath="$PROJECT_DIR$/src/DataBase/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/EmenyClasses/EnemyC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/EmenyClasses/EnemyC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/AssetsSetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/AssetsSetter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/UI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Input/KeyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Input/KeyManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/EmenyClasses/EnemyC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/EmenyClasses/EnemyC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphics/AssetsSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/AssetsSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphics/PlayerAssets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/PlayerAssets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/projectile_VIM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/projectile_VIM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/ItemAssets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/ItemAssets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graphics/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map1_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map1_preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map2_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map2_preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map3_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map3_preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Textures/sprite_sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Textures/sprite_sheet.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,27 +61,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rino/Documents/PAOO/PAOO_Grigore&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/home/rino/Documents/PAOO/PAOO_Grigore",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\AC\PAOO_Grigore\src\Resources\Maps" />
@@ -126,6 +135,9 @@
       <workItem from="1684662989079" duration="22148000" />
       <workItem from="1684698259926" duration="2617000" />
       <workItem from="1684735888665" duration="43630000" />
+      <workItem from="1684785822228" duration="2210000" />
+      <workItem from="1684818602130" duration="2314000" />
+      <workItem from="1684821386466" duration="3708000" />
     </task>
     <servers />
   </component>

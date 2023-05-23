@@ -10,8 +10,8 @@ public class projectile_VIM extends Projectile {
         super(gp);
         speed = 8;
 
-        hitBox.width = 32;
-        hitBox.height = 32;
+        hitBox.width = 48;
+        hitBox.height = 48;
 
         ItemAssets.Init();
         texture = ItemAssets.vim;

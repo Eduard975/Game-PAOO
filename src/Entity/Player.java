@@ -113,8 +113,8 @@ public class Player extends Entity {
             if (keyM.D) {
                 direction = "right";
             }
-        }
 
+        }
     }
 
     public void pickupObject(int index) {

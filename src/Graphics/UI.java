@@ -44,20 +44,21 @@ public class UI {
             }
         } else {
             g2D.setFont(font_40);
-
+            ItemAssets.Init();
             g2D.setColor(Color.RED);
-            g2D.drawString("❤ " + gp.player.hp, 50, 50);
+            g2D.drawString(" " + gp.player.hp, 65, 50);
+            g2D.drawImage(ItemAssets.heart, 40, 50 - 30, 30, 30, null);
 
             g2D.setColor(Color.WHITE);
-            g2D.drawString("\uD83D\uDC80 " + gp.player.getKillC(), 1050, 50);
-            g2D.drawString("⚔", 55, 90);
+            g2D.drawString(" " + gp.player.getKillC(), 1060, 50);
+            g2D.drawImage(ItemAssets.skull, 1150, 50 - 30, 30, 30, null);
 
-            g2D.setFont(font_40.deriveFont(Font.PLAIN, 40));
-            g2D.drawString("    " + gp.player.attack, 60, 90);
-            g2D.setFont(font_40);
+            g2D.drawString(" " + gp.player.attack, 65, 90);
+            g2D.drawImage(ItemAssets.gun, 40, 90 - 30, 30, 30, null);
 
             g2D.setColor(Color.YELLOW);
-            g2D.drawString("\uD83D\uDC5F " + gp.player.speed, 50, 130);
+            g2D.drawString(" " + gp.player.speed, 65, 130);
+            g2D.drawImage(ItemAssets.shoe, 40, 130 - 30, 30, 30, null);
 
             g2D.setColor(Color.PINK);
 
@@ -263,20 +264,38 @@ public class UI {
         int x = gp.getScreenWidth() / 2 - img_w / 2;
         int y = gp.getDefaultTileSize() * 5;
 
+        g2D.drawImage(maps[0], x, y, img_w, img_h, null);
+
+        g2D.setFont(font_40.deriveFont(Font.BOLD, 30F));
+        g2D.setColor(Color.RED);
+        g2D.drawString("Map 1", getCenterX(g2D, "Map 1"), y + 50);
+
         g2D.setFont(font_40.deriveFont(Font.PLAIN, 80F));
         g2D.setColor(Color.PINK);
-
-        g2D.drawImage(maps[0], x, y, img_w, img_h, null);
         if (selectedCommand == 2) {
             g2D.drawString("→", x - 100, y + img_h / 2 + 10);
         }
 
         g2D.drawImage(maps[1], x, y + gp.getDefaultTileSize() * 3, img_w, img_h, null);
+
+        g2D.setFont(font_40.deriveFont(Font.BOLD, 30F));
+        g2D.setColor(Color.RED);
+        g2D.drawString("Map 2", getCenterX(g2D, "Map 2"), y + gp.getDefaultTileSize() * 3 + 50);
+
+        g2D.setFont(font_40.deriveFont(Font.PLAIN, 80F));
+        g2D.setColor(Color.PINK);
         if (selectedCommand == 1) {
             g2D.drawString("→", x - 100, y + gp.getDefaultTileSize() * 3 + img_h / 2 + 10);
         }
 
         g2D.drawImage(maps[2], x, y + gp.getDefaultTileSize() * 6, img_w, img_h, null);
+
+        g2D.setFont(font_40.deriveFont(Font.BOLD, 30F));
+        g2D.setColor(Color.RED);
+        g2D.drawString("Map 3", getCenterX(g2D, "Map 3"), y + gp.getDefaultTileSize() * 6 + 50);
+
+        g2D.setFont(font_40.deriveFont(Font.PLAIN, 80F));
+        g2D.setColor(Color.PINK);
         if (selectedCommand == 0) {
             g2D.drawString("→", x - 100, y + gp.getDefaultTileSize() * 6 + img_h / 2 + 10);
         }

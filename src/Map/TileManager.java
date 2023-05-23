@@ -12,12 +12,12 @@ public class TileManager {
     Game gp;
     Tile[] tiles;
     public int[][] map;
-    String path = "src/Resources/Maps/map2.txt";
+    String path = "src/Resources/Maps/map1.txt";
     int map_option = 0;
 
     public TileManager(Game gp) {
         this.gp = gp;
-        tiles = new Tile[4];
+        tiles = new Tile[8];
 
         try {
             Scanner fin = new Scanner(new File(path));
@@ -73,6 +73,22 @@ public class TileManager {
                     tiles[i].image = Assets.void1;
                     tiles[i].collision = true;
                 }
+                case 4 -> {
+                    tiles[i].image = Assets.outer_wall;
+                    tiles[i].collision = true;
+                }
+                case 5 -> {
+                    tiles[i].image = Assets.castle_floor;
+                    tiles[i].collision = false;
+                }
+                case 6 -> {
+                    tiles[i].image = Assets.castle_middle;
+                    tiles[i].collision = false;
+                }
+                case 7 -> {
+                    tiles[i].image = Assets.sand;
+                    tiles[i].collision = false;
+                }
             }
         }
     }
@@ -112,13 +128,13 @@ public class TileManager {
             map = null;
             switch (map_option) {
                 case 0 -> {
-                    path = "src/Resources/Maps/map2.txt";
+                    path = "src/Resources/Maps/map1.txt";
                 }
                 case 1 -> {
-                    path = "src/Resources/Maps/map3.txt";
+                    path = "src/Resources/Maps/map2.txt";
                 }
                 case 2 -> {
-                    path = "src/Resources/Maps/map4.txt";
+                    path = "src/Resources/Maps/map3.txt";
                 }
             }
 
