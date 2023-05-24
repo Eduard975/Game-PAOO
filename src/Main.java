@@ -9,9 +9,6 @@ public class Main {
         window.setResizable(false);
         window.setTitle("Mesterul Grigore");
 
-        //DataBase x = new DataBase();
-        //x.killCon();
-
         Game Jocul = new Game();
         window.add(Jocul);
 
