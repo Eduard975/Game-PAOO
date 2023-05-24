@@ -4,8 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="baza de date">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9560d5c4-2661-4af8-8870-64e138e6cbcb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9560d5c4-2661-4af8-8870-64e138e6cbcb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1212A_PetrisorEduard-Gabriel_ref.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/1212A_PetrisorEduard-Gabriel_ref.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs.db" beforeDir="false" afterPath="$PROJECT_DIR$/hs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/DataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/DataBase/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Entity/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/GameWindow/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Input/KeyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Input/KeyManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameWindow/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Input/KeyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input/KeyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+=======
+    <list default="true" id="f9438329-3a9e-4f7f-ba51-6333bdd7d17a" name="Changes" comment="centrat player">
+      <change afterPath="$PROJECT_DIR$/src/DataBase/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Graphics/Assets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Map/TileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PAOO_Grigore/Resources/Maps/map4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/projectile_VIM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/projectile_VIM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/ItemAssets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/ItemAssets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphics/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphics/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map1_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map1_preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map2_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map2_preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map3_preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Maps/map3_preview.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Maps/map4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Textures/sprite_sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/Textures/sprite_sheet.png" afterDir="false" />
+>>>>>>> e3da80ae2735dae4dce16b672528069632aeedfe
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,33 +80,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/rino/Documents/PAOO/PAOO_Grigore/sqlite-jdbc-3.7.2.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "ignore.virus.scanning.warn.message": "true",
+<<<<<<< HEAD
+    "last_opened_file_path": "C:/Users/Rino/Desktop/1212A_Petrisor_Eduard-Gabriel_prj/1212A_Petrisor_Eduard-Gabriel_prj",
+=======
+    "last_opened_file_path": "/home/rino/Documents/PAOO/PAOO_Grigore",
+>>>>>>> e3da80ae2735dae4dce16b672528069632aeedfe
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
+=======
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> e3da80ae2735dae4dce16b672528069632aeedfe
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\AC\PAOO_Grigore\src\Resources\Maps" />
@@ -120,8 +173,15 @@
       <workItem from="1684735888665" duration="43630000" />
       <workItem from="1684785822228" duration="2210000" />
       <workItem from="1684818602130" duration="2314000" />
+<<<<<<< HEAD
       <workItem from="1684821386466" duration="6736000" />
       <workItem from="1684833234780" duration="82000" />
+      <workItem from="1684841032881" duration="7552000" />
+      <workItem from="1684871909026" duration="2879000" />
+      <workItem from="1684875899596" duration="49000" />
+=======
+      <workItem from="1684821386466" duration="3708000" />
+>>>>>>> e3da80ae2735dae4dce16b672528069632aeedfe
     </task>
     <servers />
   </component>

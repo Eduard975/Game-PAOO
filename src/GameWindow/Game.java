@@ -1,5 +1,6 @@
 package GameWindow;
 
+import DataBase.DataBase;
 import Entity.CollisionCheck;
 import Entity.Entity;
 import Entity.Player;
@@ -43,6 +44,7 @@ public class Game extends JPanel implements Runnable {
     public SuperObject[] obj = new SuperObject[3];
     public CollisionCheck colCheck = new CollisionCheck(this);
 
+    public DataBase db = DataBase.getInstance();
 
     public Game() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));

@@ -12,9 +12,7 @@ public class Player extends Entity {
     private static Player player = null;
     public int texture_option;
 
-
     int CD = 60;
-
 
     int kill_count = 0;
 

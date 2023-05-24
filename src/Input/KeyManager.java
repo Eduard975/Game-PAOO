@@ -67,13 +67,15 @@ public class KeyManager implements KeyListener {
                                     gp.enemies[i] = null;
                                 }
                             }
+                            gp.db.resetAdded();
                         }
 
                         if (option == 1) {
-                            //To_do
+                            gp.ui.setSubMenuState(7);
                         }
 
                         if (option == 0) {
+                            gp.db.killCon();
                             System.exit(0);
                         }
                     }
@@ -127,6 +129,10 @@ public class KeyManager implements KeyListener {
                     }
 
                     if (sub_state == 6) {
+                        gp.ui.setSubMenuState(0);
+                    }
+
+                    if (sub_state == 7) {
                         gp.ui.setSubMenuState(0);
                     }
 
